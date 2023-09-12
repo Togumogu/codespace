@@ -9,7 +9,7 @@ int main(void)
     {
         start_pop = get_int("Start Population: ");
     }
-    while (start_pop =< 9)
+    while (start_pop <= 9);
 
     //End pop failsafe
     int end_pop;
@@ -17,7 +17,7 @@ int main(void)
     {
         end_pop = get_int("Start Population: ");
     }
-    while (end_pop < start_pop)
+    while (end_pop < start_pop);
 
     //Pop Calculation
     int i = 0;
