@@ -21,9 +21,9 @@ int main(void)
 
     //Pop Calculation
     int i = 0;
-    while (n < m)
+    while (start_pop < end_pop)
     {
-        n = n + (n/3) + (n/4)l;
+        start_pop = start_pop + (start_pop/3) + (start_pop/4);
         i += 1;
     }
     printf("It took %i years to reach the designated population count.\n", i);
