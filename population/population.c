@@ -4,20 +4,20 @@
 int main(void)
 {
     //Start pop failsafe
-    int startpop;
+    int start_pop;
     do
     {
-        int startpop = get_int("Start Population: ");
+        start_pop = get_int("Start Population: ");
     }
-    while (startpop =< 9)
+    while (start_pop =< 9)
 
     //End pop failsafe
-    int endpop;
+    int end_pop;
     do
     {
-        int endpop = get_int("Start Population: ");
+        end_pop = get_int("Start Population: ");
     }
-    while (endpop < startpop)
+    while (end_pop < start_pop)
 
     //Pop Calculation
     int i = 0;
