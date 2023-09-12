@@ -15,7 +15,7 @@ int main(void)
     int end_pop;
     do
     {
-        end_pop = get_int("Start Population: ");
+        end_pop = get_int("End Population: ");
     }
     while (end_pop < start_pop);
 
