@@ -23,7 +23,7 @@ int main(void)
     int i = 0;
     while (start_pop < end_pop)
     {
-        start_pop = start_pop + (start_pop/3) + (start_pop/4);
+        start_pop = start_pop + (start_pop/3) - (start_pop/4);
         i += 1;
     }
     printf("It took %i years to reach the designated population count.\n", i);
