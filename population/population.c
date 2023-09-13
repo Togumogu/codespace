@@ -26,5 +26,5 @@ int main(void)
         start_pop = start_pop + (start_pop / 3) - (start_pop / 4);
         i += 1;
     }
-    printf("It took %i years to reach the designated population count.\n", i);
+    printf("Years: %i\n", i);
 }
