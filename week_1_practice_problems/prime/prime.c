@@ -30,6 +30,12 @@ int main(void)
 
 bool prime(int number)
 {
+    // For 1
+    if (number == 1)
+    {
+        return false;
+    }
+
     for (int j = 2; j < number; j++)
     {
         if (number % j == 0)
