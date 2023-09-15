@@ -20,8 +20,8 @@ int main(void)
 float half(float bill, float tax, int tip)
 {
     float bill_tax = bill + (bill * (tax / 100));
-    printf("%f\n", bill_tax);
+    printf("Bill & Tax: %f\n", bill_tax);
     float fin_amount = bill_tax + (bill_tax * (tip / 100));
-    printf("%f\n", fin_amount);
+    printf("Fin Amount: %f\n", fin_amount);
     return fin_amount;
 }
