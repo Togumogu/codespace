@@ -32,8 +32,9 @@ bool prime(int number)
 {
     for (int j = 2; j < number; j++)
     {
-        number % j == 0;
-        return false;
+        if (number % j == 0)
+        {
+            return false;
+        }
     }
-
 }
