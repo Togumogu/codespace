@@ -9,7 +9,7 @@ int main(void)
     {
         n = get_int("Width: ");
     }
-    while (n < 1);
+    while (n < 1 || n > 9);
 
     //Build the hash loop
     for (int i = 0; i < n; i++)
