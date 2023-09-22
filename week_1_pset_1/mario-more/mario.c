@@ -11,7 +11,9 @@ int main(void)
     }
     while (n < 1 || n > 9);
 
-    //Build the hash loop
+    for (int i = n;)
+
+    //Build the right hash loop
     for (int i = 0; i < n; i++)
     {
         for (int j = 0; j <= i; j++)
