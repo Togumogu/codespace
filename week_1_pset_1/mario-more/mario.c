@@ -3,7 +3,7 @@
 //
 int main(void)
 {
-    //Failsafe for inputs for 0 and negative numbers
+    // Failsafe for inputs for 0 and negative numbers
     int n;
     do
     {
@@ -13,24 +13,24 @@ int main(void)
 
     for (int i = 0; i < n; i++)
     {
-        //print space for left
-        for (int j = (n-1); j > i ; j--)
+        // print space for left
+        for (int j = (n - 1); j > i; j--)
         {
             printf(" ");
         }
-        //print hash for left
+        // print hash for left
         for (int j = 0; j <= i; j++)
         {
             printf("#");
         }
-        //leave 2 gaps
+        // leave 2 gaps
         printf("  ");
-        //print hash for left
+        // print hash for left
         for (int j = 0; j <= i; j++)
         {
             printf("#");
         }
-        //new line
+        // new line
         printf("\n");
     }
 }
