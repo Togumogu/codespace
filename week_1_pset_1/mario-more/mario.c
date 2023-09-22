@@ -25,7 +25,7 @@ int main(void)
         }
         // leave 2 gaps
         printf("  ");
-        // print hash for left
+        // print hash for right
         for (int j = 0; j <= i; j++)
         {
             printf("#");
