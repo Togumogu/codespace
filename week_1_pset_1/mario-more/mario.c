@@ -11,7 +11,16 @@ int main(void)
     }
     while (n < 1 || n > 9);
 
-    for (int i = n;)
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = i; j < n; j++)
+        {
+            printf("#");
+        }
+        printf("\n");
+    }
+    //Space
+    printf("\n");
 
     //Build the right hash loop
     for (int i = 0; i < n; i++)
