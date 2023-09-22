@@ -15,7 +15,7 @@ int main(void)
     {
         for (int j = n; j > i ; j--)
         {
-            printf("s");
+            printf(".");
         }
         printf("\n");
     }
