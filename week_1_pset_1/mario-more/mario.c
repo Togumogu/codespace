@@ -24,9 +24,6 @@ int main(void)
         }
         printf("\n");
     }
-    //Space
-    printf("\n");
-
     //Build the right hash loop
     for (int i = 0; i < n; i++)
     {
