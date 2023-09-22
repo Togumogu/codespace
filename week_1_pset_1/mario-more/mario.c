@@ -15,9 +15,9 @@ int main(void)
     {
         for (int j = 0; j <= i ; j++)
         {
-            printf(" ");
+            printf("#");
         }
-        printf("#");
+        printf("\n");
     }
     //Space
     printf("\n");
