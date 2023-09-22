@@ -23,9 +23,14 @@ int main(void)
         {
             printf("#");
         }
-        printf("\n");
-
         //leave 2 gaps
+        printf("  ");
         //print hash for left
+        for (int j = 0; j <= i; j++)
+        {
+            printf("#");
+        }
         //new line
+        printf("\n");
     }
+}
