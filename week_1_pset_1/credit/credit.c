@@ -11,6 +11,6 @@ int main(void)
     while ()
 
     //get the second to last digit
-    ((n % 100) - (n % 10))
+    ((n % 100) - (n % 10)) / 100
     //sodaki sifiri atmanin yolunu bul
 }
