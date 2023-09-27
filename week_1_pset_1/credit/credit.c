@@ -3,10 +3,10 @@
 
 int main(void)
 {
-    float credit;
+    long credit;
     do
     {
-        credit = get_float("Credit Card Number: ");
+        credit = get_long("Credit Card Number: ");
     }
     while ()
 
