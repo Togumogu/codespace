@@ -5,7 +5,7 @@ bool checkSum(long input_number);
 //
 int main(void)
 {
-    //Get input
+    // Get input
     long credit_num;
     do
     {
@@ -13,7 +13,7 @@ int main(void)
     }
     while (credit_num <= 0);
     //
-    //Check for length
+    // Check for length
     int num_length = 0;
     long count_length = credit_num;
     do
@@ -23,20 +23,20 @@ int main(void)
     }
     while (count_length > 0);
     //
-    //Check for length being correct
+    // Check for length being correct
     if (num_length != 15 && num_length != 16 && num_length != 13)
     {
         printf("Invalid Card Length: %i\n", num_length);
         credit_num = get_long("Credit Card Number: ");
     }
-    //Checksum func
+    // Checksum func
     checkSum(credit_num);
 }
 //
-//Checksum
+// Checksum
 bool checkSum(long input_number)
 {
-    //Part 2 - get remaining digits
+    // Part 2 - get remaining digits
     long num1 = input_number;
     int sum1 = 0;
     int digit1 = 0;
@@ -48,9 +48,8 @@ bool checkSum(long input_number)
         sum1 += digit1;
     }
     while (num1 > 0);
-    printf("%i\n", sum1);
     //
-    //Part 1 - the complex part
+    // Part 1 - the complex part
     long num2 = input_number;
     int sum2 = 0;
     int digit2 = 0;
@@ -71,14 +70,11 @@ bool checkSum(long input_number)
         while (digit2 > 0);
     }
     while (num2 > 0);
-    printf("%i\n", sum2);
     //
-    //Add part 1 & part 2
+    // Add part 1 & part 2 and check if legit
     int total;
     total = sum1 + sum2;
-    printf("%i\n", total);
     //
-    //Check if legit
     if (total % 10 == 0)
     {
         printf("Card is legit\n");
