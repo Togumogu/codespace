@@ -12,7 +12,7 @@ int main(void)
 
     int result10 = credit % 10;
     int result100 = credit % 100;
-    int final = result100 % 10;
+    int final = result100 % 100;
 
     printf("%i\n", result10);
     printf("%i\n", result100);
