@@ -46,7 +46,7 @@ bool checkSum(long credit_num)
         sum1 += digit1;
     }
     while (num1 > 0);
-    printf("%i\n", sum1)
+    printf("%i\n", sum1);
     //
     //Part 1 - the complex part
     long num2 = credit_num;
@@ -58,7 +58,7 @@ bool checkSum(long credit_num)
     {
         digit2 = (num2 / 10) % 10;
         num2 = num2 / 100;
-        digit2 = digit2 * 2
+        digit2 = digit2 * 2;
         //
         do
         {
@@ -68,8 +68,8 @@ bool checkSum(long credit_num)
         }
         while (digit2 > 0);
     }
-    while (num2 > 0)
-    printf("%i\n", sum2)
+    while (num2 > 0);
+    printf("%i\n", sum2);
     //
     //Add part 1 & part 2
     int total;
@@ -79,11 +79,11 @@ bool checkSum(long credit_num)
     if (total % 10 == 0)
     {
         printf("Card is legit");
-        return true
+        return true;
     }
     else
     {
         printf("Card is not legit");
-        return false
+        return false;
     }
 }
