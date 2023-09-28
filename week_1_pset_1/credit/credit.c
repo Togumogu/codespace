@@ -30,6 +30,7 @@ int main(void)
     }
     //
     //Checksum
-    WDFcheckSum(credit_num);
+    checkSum(credit_num);
+    //
 
 }
