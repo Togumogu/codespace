@@ -76,16 +76,17 @@ bool checkSum(long input_number)
     //Add part 1 & part 2
     int total;
     total = sum1 + sum2;
+    printf("%i\n", total);
     //
     //Check if legit
     if (total % 10 == 0)
     {
-        printf("Card is legit");
+        printf("Card is legit\n");
         return true;
     }
     else
     {
-        printf("Card is not legit");
+        printf("Card is not legit\n");
         return false;
     }
 }
