@@ -90,6 +90,6 @@ bool checkSum(long input_number)
     while (check_card > 100);
     //
     // Check which card
-    if ()
+    if (check_card ==)
 
 }
