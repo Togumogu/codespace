@@ -27,7 +27,7 @@ int main(void)
     if (num_length != 15 && num_length != 16 && num_length != 13)
     {
         printf("INVALID\n");
-        return 0;
+        return false;
     }
     // Checksum func
     checkSum(credit_num);
