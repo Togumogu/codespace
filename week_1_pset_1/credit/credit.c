@@ -1,6 +1,8 @@
 #include <cs50.h>
 #include <stdio.h>
 
+bool checkSum(credit_num);
+
 int main(void)
 {
     //Get input
@@ -8,8 +10,7 @@ int main(void)
     do
     {
         credit_num = get_long("Credit Card Number: ");
-#=1a`   1QSW
-#}
+    }
     while (credit_num <= 0);
     //
     //Check for length
@@ -30,7 +31,10 @@ int main(void)
     }
     //
     //Checksum
-    checkSum(credit_num);
-    //
+    bool checkSum(credit_num);
+    int set1 = 0;
+    int set2 = 0;
+    long func_num = credit_num;
+    
 
 }
