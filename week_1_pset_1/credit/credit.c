@@ -81,8 +81,11 @@ bool checkSum(long input_number)
         return false;
     }
     //
+    //Check what card
+    
     do
     {
 
     }
+    while ()
 }
