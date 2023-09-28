@@ -7,11 +7,9 @@ int main(void)
     int set1 = 0;
     int digit1 = 0;
 
-    do
-    {
-        digit1 = (func_num % 10) / 10;
-        set1 += digit1;
-    }
-    while (func_num > 0);
+    digit1 = (func_num % 10) / 10;
+    printf("%i\n", digit1)
+    set1 += digit1;
+    printf("%i\n", set1)
 
 }
