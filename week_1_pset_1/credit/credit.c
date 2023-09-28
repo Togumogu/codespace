@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
-bool checkSum(credit_num);
+bool checkSum(long credit_num);
 
 int main(void)
 {
@@ -32,7 +32,7 @@ int main(void)
 }
 //
 //Checksum
-bool checkSum(credit_num)
+bool checkSum(long credit_num)
 {
     long func_num = credit_num;
     int set1 = 0;
@@ -42,9 +42,9 @@ bool checkSum(credit_num)
 
     do
     {
-        digit1 = (func_num % 10) / 10
-        set1 += digit1
+        digit1 = (func_num % 10) / 10;
+        set1 += digit1;
     }
     while (func_num > 0);
-    printf("%lu\n", func_num)
+    printf("%lu\n", func_num);
 }
