@@ -10,6 +10,8 @@ int main(void)
     }
     while (credit < 0);
 
+    
+
     int result10 = credit % 10;
     int result100 = credit % 100;
     int final = result100 % 100;
