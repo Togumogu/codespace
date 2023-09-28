@@ -3,14 +3,21 @@
 
 int main(void)
 {
-    long credit;
+    //Get input
+    long credit_num;
     do
     {
-        credit = get_long("Credit Card Number: ");
+        credit_num = get_long("Credit Card Number: ");
     }
-    while (credit < 0);
+    while (credit_num <= 0);
+    //Check for lenght
+    int num_length
+    do
+    {
+        
+    }
 
-    
+
 
     int result10 = credit % 10;
     int result100 = credit % 100;
