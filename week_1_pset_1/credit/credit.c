@@ -108,6 +108,7 @@ bool checkSum(long input_number)
     }
     else
     {
+        printf("INVALID\n");
         return false;
     }
 }
