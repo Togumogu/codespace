@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 //
-bool checkSum(long input_number);
+void checkSum(long input_number);
 //
 int main(void)
 {
@@ -34,7 +34,7 @@ int main(void)
 }
 //
 // Checksum
-bool checkSum(long input_number)
+void checkSum(long input_number)
 {
     // Part 2 - get remaining digits
     long num1 = input_number;
@@ -78,7 +78,7 @@ bool checkSum(long input_number)
     if (total % 10 != 0)
     {
         printf("INVALID\n");
-        return false;
+        return 1;
     }
     //
     // Get the first two digits
@@ -90,10 +90,19 @@ bool checkSum(long input_number)
     while (check_card > 100);
     //
     // Check which card
-    if (check_card == 34 || check_card == 37 )
+    if (check_card == 34 || check_card == 37)
     {
         printf("AMERICAN EXPRESS\n");
-        return true;
+        return 0;
     }
-
+    else if (check_card == 51 || check_card == 52 || check_card == 53 || check_card == 54 || check_card == 55)
+    {
+        printf("MASTERCARD\n");
+        return 0;
+    }
+    else if (check_card / 10 == 4)
+    {
+        printf("MASTERCARD\n");
+        return 0;
+    }
 }
