@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
-bool checkSum(long credit_num);
+void checkSum(long credit_num);
 
 int main(void)
 {
@@ -32,7 +32,7 @@ int main(void)
 }
 //
 //Checksum
-bool checkSum(long credit_num)
+void checkSum(long credit_num)
 {
     long func_num = credit_num;
     int set1 = 0;
