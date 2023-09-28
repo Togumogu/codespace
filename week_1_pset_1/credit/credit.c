@@ -103,7 +103,7 @@ bool checkSum(long input_number)
     }
     else if (check_card / 10 == 4)
     {
-        printf("MASTERCARD\n");
+        printf("VISA\n");
         return true;
     }
     else
