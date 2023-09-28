@@ -43,5 +43,10 @@ void checkSum(long credit_num)
     {
         digit1 = num1 % 10;
         num1 = num1 / 100;
+        sum1 += digit1
     }
+
+    //Add part 1 & part 2
+    int total;
+    total = sum1 + sum2;
 }
