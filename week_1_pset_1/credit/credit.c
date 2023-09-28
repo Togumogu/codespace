@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 //
-bool checkSum(long credit_num);
+bool checkSum(long input_number);
 //
 int main(void)
 {
@@ -30,15 +30,14 @@ int main(void)
         credit_num = get_long("Credit Card Number: ");
     }
     //Checksum func
-    bool checkSum()
-
+    bool checkSum(credit_num);
 }
 //
 //Checksum
-bool checkSum(long credit_num)
+bool checkSum(long input_number)
 {
     //Part 2 - get remaining digits
-    long num1 = credit_num;
+    long num1 = input_number;
     int sum1 = 0;
     int digit1 = 0;
     //
@@ -52,7 +51,7 @@ bool checkSum(long credit_num)
     printf("%i\n", sum1);
     //
     //Part 1 - the complex part
-    long num2 = credit_num;
+    long num2 = input_number;
     int sum2 = 0;
     int digit2 = 0;
     int tmp2 = 0;
