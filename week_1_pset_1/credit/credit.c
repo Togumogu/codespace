@@ -57,7 +57,11 @@ bool checkSum(long credit_num)
         digit2 = (num2 / 10) % 10;
         num2 = num2 / 100;
         digit2 = digit2 * 2
-        
+        //
+        do
+        {
+            
+        }
 
     }
     while (num2 > 0)
