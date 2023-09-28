@@ -6,6 +6,9 @@ int main(void)
     long func_num = get_long("long?  ");
     int set1 = 0;
     int digit1 = 0;
+    int mae = 9 % 10;
+    printf("%i\n",mae);
+
 
     do
     {

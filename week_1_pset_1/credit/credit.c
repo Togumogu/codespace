@@ -46,11 +46,13 @@ bool checkSum(long credit_num)
         sum1 += digit1;
     }
     while (num1 > 0);
+    printf("%i\n", sum1)
     //
     //Part 1 - the complex part
     long num2 = credit_num;
     int sum2 = 0;
     int digit2 = 0;
+    int tmp2 = 0;
     //
     do
     {
@@ -60,11 +62,14 @@ bool checkSum(long credit_num)
         //
         do
         {
-            
+            tmp2 = digit2 % 10;
+            digit2 = digit2 / 10;
+            sum2 += tmp2;
         }
-
+        while (digit2 > 0);
     }
     while (num2 > 0)
+    printf("%i\n", sum2)
     //
     //Add part 1 & part 2
     int total;
