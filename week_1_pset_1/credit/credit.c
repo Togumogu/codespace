@@ -24,11 +24,12 @@ int main(void)
     while (count_length > 0);
     //
     //Check for length being correct
-    if (num_length != 15 && num_length != 16 && num_length != 13)
+    do
     {
         printf("Invalid Card Length\n");
         credit_num = get_long("Credit Card Number: ");
     }
+    while (num_length != 15 && num_length != 16 && num_length != 13);
 }
 //
 //Checksum
