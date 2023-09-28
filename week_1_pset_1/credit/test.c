@@ -9,7 +9,7 @@ int main(void)
 
     do
     {
-        digit1 = func_num % 10;
+        digit1 = (func_num / 10) % 10;
         printf("digit1 %i\n", digit1);
         func_num = func_num / 100;
         printf("funcnum after 2 digits: %lu\n", func_num);

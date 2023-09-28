@@ -35,7 +35,7 @@ int main(void)
 bool checkSum(long credit_num)
 {
     //Part 2 - get remaining digits
-    long num1 = credit_num
+    long num1 = credit_num;
     int set1 = 0;
     int digit1 = 0;
     //
@@ -48,13 +48,14 @@ bool checkSum(long credit_num)
     while (num1 > 0);
     //
     //Part 1 - the complex part
-    long num2 = credit_num
+    long num2 = credit_num;
     int set2 = 0;
     int digit2 = 0;
     //
     do
     {
-
+        digit2 = (num2 / 10) % 10;
+        num2 = num2 / 100;
 
     }
     while (num2 > 0)
