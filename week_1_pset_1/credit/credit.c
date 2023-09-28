@@ -31,10 +31,16 @@ int main(void)
     }
     //
     //Checksum
-    bool checkSum(credit_num);
-    int set1 = 0;
-    int set2 = 0;
-    long func_num = credit_num;
-    
+    bool checkSum(credit_num)
+    {
+        int set1 = 0;
+        int set2 = 0;
+        long func_num = credit_num;
+        do
+        {
+            func_num = 
+        }
+    }
+
 
 }
