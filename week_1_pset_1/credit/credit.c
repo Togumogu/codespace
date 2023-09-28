@@ -29,5 +29,6 @@ int main(void)
     }
     //
     //Checksum
+    checkSum(credit_num);
 
 }
