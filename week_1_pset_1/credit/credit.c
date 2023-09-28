@@ -10,16 +10,18 @@ int main(void)
         credit_num = get_long("Credit Card Number: ");
     }
     while (credit_num <= 0);
-    //Check for lenght
+    //
+    //Check for length
     int num_length = 0;
     long count_length = credit_num;
     do
     {
+        printf("%lu\n", count_length);
         count_length = count_length / 10;
         num_length++;
-        printf("%lu\n", count_length);
+
     }
-    while (credit_num > 0);
+    while (count_length > 0);
 
     printf("%i\n", num_length);
 }
