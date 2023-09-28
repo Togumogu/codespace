@@ -11,19 +11,15 @@ int main(void)
     }
     while (credit_num <= 0);
     //Check for lenght
-    int num_length
+    int num_length = 0;
+    long count_length = credit_num;
     do
     {
-        
+        count_length = count_length / 10;
+        num_length++;
+        printf("%lu\n", count_length);
     }
+    while (credit_num > 0);
 
-
-
-    int result10 = credit % 10;
-    int result100 = credit % 100;
-    int final = result100 % 100;
-
-    printf("%i\n", result10);
-    printf("%i\n", result100);
-    printf("%i\n", final);
+    printf("%i\n", num_length);
 }
