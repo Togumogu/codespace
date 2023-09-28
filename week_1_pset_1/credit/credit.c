@@ -29,7 +29,7 @@ int main(void)
         printf("Invalid Card Length\n");
         credit_num = get_long("Credit Card Number: ");
     }
-    while (num_length != 15 && num_length != 16 && num_length != 13);
+    while (num_length != 15 || num_length != 16 || num_length != 13);
 }
 //
 //Checksum
