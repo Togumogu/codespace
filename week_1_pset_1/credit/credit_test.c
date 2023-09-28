@@ -5,12 +5,20 @@ int main(void)
 {
     long test = get_long("number?");
 
+    //First Digits
+
     int set1 = 0;
     long tmp1 = test;
     int digit1 = 0;
 
-    //First Digits
+    do
+    {
+        digit1 = (tmp1 % 10) / 10;
+        printf("%i\n", digit2);
+        set2 += digit1
 
+    }
+    while (tmp2 > 0)
 
 
     //Second Digits
@@ -22,7 +30,7 @@ int main(void)
     {
         digit2 = (tmp2 % 100) / 10;
         printf("%i\n", digit2);
-        set2 
+        set2
 
     }
     while (tmp2 > 0)
