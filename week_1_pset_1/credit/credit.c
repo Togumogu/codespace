@@ -82,7 +82,7 @@ bool checkSum(long input_number)
     }
     else
     {
-        printf("Card is not legit\n");
+        printf("INVALID\n");
         return false;
     }
 }
