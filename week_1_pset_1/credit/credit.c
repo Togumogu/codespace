@@ -79,4 +79,9 @@ bool checkSum(long input_number)
     {
         printf("INVALID\n");
         return false;
+    }
+    do
+    {
+        
+    }
 }
