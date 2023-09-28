@@ -4,27 +4,12 @@
 int main(void)
 {
     long func_num = get_long("long?  ");
-    int set1 = 0;
-    int digit1 = 0;
-    int mae = 9 % 10;
-    printf("%i\n",mae);
-
-
-    do
-    {
-        digit1 = (func_num / 10) % 10;
-        printf("digit1 %i\n", digit1);
-        func_num = func_num / 100;
-        printf("funcnum after 2 digits: %lu\n", func_num);
-        set1 += digit1;
-        printf("set1: %i\n", set1);
-    }
-    while (func_num > 0);
 
     long check_card = func_num;
     do
     {
-        func_num = func_num / 10
+        check_card = check_card / 10
     }
-    while (func_num < 100)
+    while (check_card < 100);
+    printf("%lu\n", check_card);
 }
