@@ -3,14 +3,18 @@
 
 int main(void)
 {
-    int set1 = 0;
-    long tmp = 0;
     long test = get_long("number?");
+
+    int set1 = 0;
+    long tmp = test ;
+    int digit = 0;
+
     do
     {
-        tmp = (test % 100) / 10;
+        digit = (test % 100) / 10;
 
     }
+    while (tmp > 0)
 
 
 
