@@ -6,15 +6,26 @@ int main(void)
     long test = get_long("number?");
 
     int set1 = 0;
-    long tmp = test ;
-    int digit = 0;
+    long tmp1 = test;
+    int digit1 = 0;
+
+    //First Digits
+
+
+
+    //Second Digits
+    int set2 = 0;
+    long tmp2 = test;
+    int digit2 = 0;
 
     do
     {
-        digit = (test % 100) / 10;
+        digit2 = (tmp2 % 100) / 10;
+        printf("%i\n", digit2);
+        set2 
 
     }
-    while (tmp > 0)
+    while (tmp2 > 0)
 
 
 
