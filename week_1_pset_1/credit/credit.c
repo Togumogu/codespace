@@ -30,7 +30,7 @@ int main(void)
         credit_num = get_long("Credit Card Number: ");
     }
     //Checksum func
-    bool checkSum(credit_num);
+    checkSum(credit_num);
 }
 //
 //Checksum
