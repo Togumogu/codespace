@@ -36,7 +36,7 @@ bool checkSum(long credit_num)
 {
     //Part 2 - get remaining digits
     long num1 = credit_num;
-    int set1 = 0;
+    int sum1 = 0;
     int digit1 = 0;
     //
     do
@@ -49,7 +49,7 @@ bool checkSum(long credit_num)
     //
     //Part 1 - the complex part
     long num2 = credit_num;
-    int set2 = 0;
+    int sum2 = 0;
     int digit2 = 0;
     //
     do
