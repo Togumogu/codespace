@@ -20,4 +20,11 @@ int main(void)
         printf("set1: %i\n", set1);
     }
     while (func_num > 0);
+
+    long check_card = func_num;
+    do
+    {
+        func_num = func_num / 10
+    }
+    while (func_num < 100)
 }

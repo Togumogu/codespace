@@ -31,14 +31,6 @@ int main(void)
     }
     // Checksum func
     checkSum(credit_num);
-    //
-    //Check what card
-
-    do
-    {
-
-    }
-    while ()
 }
 //
 // Checksum
@@ -88,4 +80,12 @@ bool checkSum(long input_number)
         printf("INVALID\n");
         return false;
     }
+    //
+    //Check what card is
+    long check_card = input_number;
+    do
+    {
+        intput_number = input_number / 10
+    }
+    while (input_number < 100)
 }
