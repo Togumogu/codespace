@@ -90,6 +90,10 @@ bool checkSum(long input_number)
     while (check_card > 100);
     //
     // Check which card
-    if (check_card ==)
+    if (check_card == 34 || check_card == 37 )
+    {
+        printf("AMERICAN EXPRESS\n");
+        return true;
+    }
 
 }
