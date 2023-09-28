@@ -19,6 +19,7 @@ int main(void)
         printf("%lu\n", count_length);
         count_length = count_length / 10;
         num_length++;
+        //check for what card?
 
     }
     while (count_length > 0);
