@@ -27,5 +27,7 @@ int main(void)
         printf("Invalid Card Length\n");
         return 1;
     }
+    //
+    //Checksum
 
 }
