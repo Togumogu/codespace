@@ -81,11 +81,15 @@ bool checkSum(long input_number)
         return false;
     }
     //
-    //Check what card is
+    // Get the first two digits
     long check_card = input_number;
     do
     {
-        intput_number = input_number / 10
+        check_card = check_card / 10;
     }
-    while (input_number < 100)
+    while (check_card > 100);
+    //
+    // Check which card
+    if ()
+
 }

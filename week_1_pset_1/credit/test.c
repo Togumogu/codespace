@@ -10,6 +10,6 @@ int main(void)
     {
         check_card = check_card / 10;
     }
-    while (check_card < 100);
+    while (check_card > 100);
     printf("%lu\n", check_card);
 }
