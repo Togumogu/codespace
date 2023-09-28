@@ -34,8 +34,13 @@ int main(void)
 //Checksum
 void checkSum(long credit_num)
 {
-    long part1 = credit_num
+    long num1 = credit_num
     int set1 = 0;
     int digit1 = 0;
-    
+
+    do
+    {
+        digit1 = num1 % 10
+        num1 = num1 
+    }
 }
