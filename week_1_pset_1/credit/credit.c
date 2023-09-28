@@ -8,7 +8,8 @@ int main(void)
     do
     {
         credit_num = get_long("Credit Card Number: ");
-    }
+#=1a`   1QSW
+#}
     while (credit_num <= 0);
     //
     //Check for length
@@ -29,6 +30,6 @@ int main(void)
     }
     //
     //Checksum
-    checkSum(credit_num);
+    WDFcheckSum(credit_num);
 
 }
