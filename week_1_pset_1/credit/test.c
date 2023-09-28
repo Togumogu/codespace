@@ -17,6 +17,4 @@ int main(void)
         printf("set1: %i\n", set1);
     }
     while (func_num > 0);
-
-
 }
