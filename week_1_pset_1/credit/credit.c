@@ -77,12 +77,6 @@ bool checkSum(long input_number)
     //
     if (total % 10 != 0)
     {
-        printf("Card is legit\n");
-        return true;
-    }
-    else
-    {
         printf("INVALID\n");
         return false;
-    }
 }
