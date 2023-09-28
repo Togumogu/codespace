@@ -34,17 +34,8 @@ int main(void)
 //Checksum
 void checkSum(long credit_num)
 {
-    long func_num = credit_num;
+    long part1 = credit_num
     int set1 = 0;
-    int set2 = 0;
     int digit1 = 0;
-    int digit2 = 0;
-
-    do
-    {
-        digit1 = (func_num % 10) / 10;
-        set1 += digit1;
-    }
-    while (func_num > 0);
-    printf("%lu\n", func_num);
+    
 }
