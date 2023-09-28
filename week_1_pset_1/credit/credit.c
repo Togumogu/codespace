@@ -10,9 +10,11 @@ int main(void)
     }
     while (credit < 0);
 
-    long result10 = credit % 10;
-    long result100 = credit % 100;
+    int result10 = credit % 10;
+    int result100 = credit % 100;
+    int final = result100 % 10;
 
-    printf("%l\n", result10);
-    printf("%l\n", result100);
+    printf("%i\n", result10);
+    printf("%i\n", result100);
+    printf("%i\n", final);
 }
