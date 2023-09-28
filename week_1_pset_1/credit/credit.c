@@ -29,6 +29,8 @@ int main(void)
         printf("Invalid Card Length: %i\n", num_length);
         credit_num = get_long("Credit Card Number: ");
     }
+    //Checksum func
+    bool checkSum()
 
 }
 //
