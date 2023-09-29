@@ -29,24 +29,21 @@ bool valid(string password)
     {
         if (isupper(password[i]))
         {
-            return true;
+            return false;
         }
-        else if (islower(password[i]))
-        {
-            return true;
-        }
-        else if (isdigit(password[i]))
-        {
-            return true;
-        }
-        else if (ispunct(password[i]))
-        {
-            return true;
-        }
-        else
+        if (islower(password[i]))
         {
             return false;
         }
-
+        if (isdigit(password[i]))
+        {
+            return false;
+        }
+        if (ispunct(password[i]))
+        {
+            return false;
+        }
+        return true;
     }
 }
+
