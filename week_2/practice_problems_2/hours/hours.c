@@ -54,3 +54,22 @@ float calc_hours(int hours[], int weeks, char output)
         return false;
     }
 }
+// Since both of A and T's for loops start the same we can put the if statements in a single for loop as well
+// it should look something like this
+/*
+    float calc_hours(int hours[], int weeks, char output)
+    {
+        for (int i = 0; i < hours; i++)
+        {
+            if (output = T)
+            {
+            return hours;
+            }
+            if (output = A)
+            {
+            average = hours / weeks;
+            return average;
+            }
+        }
+    }
+*/
