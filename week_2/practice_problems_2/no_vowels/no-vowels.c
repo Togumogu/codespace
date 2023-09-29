@@ -19,5 +19,8 @@ int main(int argc, string argv[])
 
 string replace(string word)
 {
-    if (word[])
+    for (int i = 0; i <= strleng(word), i++)
+    {
+        if (word[i] = 'A')
+    }
 }
