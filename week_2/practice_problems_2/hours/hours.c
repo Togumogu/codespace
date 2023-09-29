@@ -49,4 +49,8 @@ float calc_hours(int hours[], int weeks, char output)
         av_hours = total_hours / weeks;
         return av_hours;
     }
+    else
+    {
+        return false;
+    }
 }
