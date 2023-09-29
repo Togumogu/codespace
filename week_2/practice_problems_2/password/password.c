@@ -4,6 +4,7 @@
 
 #include <cs50.h>
 #include <stdio.h>
+#include <ctype.h>
 
 bool valid(string password);
 
@@ -23,9 +24,28 @@ int main(void)
 // TODO: Complete the Boolean function below
 bool valid(string password)
 {
-    for (int i = 0; int <= strlen(password); i++)
+    for (int i = 0; i <= strlen(password); i++)
     {
-        if (password[i] != isupper)
+        if (isupper(password[i]) == FALSE)
+        {
+            return false;
+        }
+        else if (islower(password[i]) == FALSE)
+        {
+            return false;
+        }
+        else if (isdigit(password[i]) == FALSE)
+        {
+            return false;
+        }
+        else if (ispunct(password[i]) == FALSE)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+
     }
-    return false;
 }
