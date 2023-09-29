@@ -21,6 +21,21 @@ string replace(string word[])
 {
     for (int i = 0; i <= word[]; i++)
     {
-        if (word[i] = 'A')
+        if (word[i] = 'a')
+        {
+            word[i] = '6';
+        }
+        if (word[i] = 'e')
+        {
+            word[i] = '3';
+        }
+        if (word[i] = 'i')
+        {
+            word[i] = '1';
+        }
+        if (word[i] = 'o')
+        {
+            word[i] = '0';
+        }
     }
 }
