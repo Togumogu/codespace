@@ -5,8 +5,9 @@
 
 #include <cs50.h>
 #include <stdio.h>
+#include <string.h>
 
-string replace(string word[]);
+string replace(string word);
 
 int main(int argc, string argv[])
 {
@@ -15,32 +16,29 @@ int main(int argc, string argv[])
         printf("Usage: ./no-vowels word\n");
         return 1;
     }
-
-     replace(argv[1])
+     printf("%s\n", replace(argv[1]));
 }
 
-string replace(string word[])
+string replace(string word)
 {
-    int array_length = 0;
-    for (int i = 0; i )
-    for (int i = 0; i <= word; i++)
+    for (int i = 0; i <= strlen(word); i++)
     {
-        if (word[i] = 'a')
+        if (word[i] == 'a')
         {
             word[i] = '6';
         }
-        if (word[i] = 'e')
+        if (word[i] == 'e')
         {
             word[i] = '3';
         }
-        if (word[i] = 'i')
+        if (word[i] == 'i')
         {
             word[i] = '1';
         }
-        if (word[i] = 'o')
+        if (word[i] == 'o')
         {
             word[i] = '0';
         }
     }
-    printf("%s\n", word);
+    return word;
 }
