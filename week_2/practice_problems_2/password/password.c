@@ -25,13 +25,18 @@ int main(void)
 // TODO: Complete the Boolean function below
 bool valid(string password)
 {
+    bool valid_upper = false;
+    bool valid_lower = false;
+    bool valid_digit = false;
+    bool valid_punct = false;
+    //
     for (int i = 0; i <= strlen(password); i++)
     {
-        if (isupper(password[i]) && islower(password[i]) && isdigit(password[i]) && ispunct(password[i]))
+        if (isupper(password[i]))
         {
-            return true;
+            valid_upper = true;
         }
-        else
+        if else (islower(password[i]))
         {
             return false;
         }
