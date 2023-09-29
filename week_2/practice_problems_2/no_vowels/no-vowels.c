@@ -16,6 +16,13 @@ int main(int argc, string argv[])
         printf("Usage: ./no-vowels word\n");
         return 1;
     }
+    /* Also Viable for control
+    if (argc != 2)
+    {
+        printf("Usage: ./no-vowels word\n");
+        return 1;
+    }
+    */
      printf("%s\n", replace(argv[1]));
 }
 
@@ -42,3 +49,20 @@ string replace(string word)
     }
     return word;
 }
+/* with Switch statements
+
+string replace(string word)
+{
+    for (int i = 0; i <= strlen(word); i++)
+    {
+        switch (word[i])
+        {
+            case 'a':
+                word[i] = '6';
+                break;
+                ....
+        }
+    }
+}
+
+*/
