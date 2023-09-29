@@ -23,7 +23,7 @@ int main(int argc, string argv[])
         return 1;
     }
     */
-     printf("%s\n", replace(argv[1]));
+    printf("%s\n", replace(argv[1]));
 }
 
 string replace(string word)
