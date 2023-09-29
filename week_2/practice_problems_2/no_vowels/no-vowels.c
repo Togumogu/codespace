@@ -12,11 +12,11 @@ int main(int argc, string argv[])
 {
     if (argv[1] == NULL)
     {
-        printf("Error\n");
+        printf("Usage: ./no-vowels word\n");
         return 1;
     }
 
-    replace(argv[1]);
+     replace(argv[1])
 }
 
 string replace(string word[])
