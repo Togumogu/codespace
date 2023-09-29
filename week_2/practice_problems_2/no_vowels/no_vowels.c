@@ -49,6 +49,7 @@ string replace(string word)
     }
     return word;
 }
+
 /* with Switch statements
 
 string replace(string word)
@@ -64,5 +65,4 @@ string replace(string word)
         }
     }
 }
-
 */
