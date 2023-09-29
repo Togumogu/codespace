@@ -35,17 +35,17 @@ bool valid(string password)
         {
             valid_upper = true;
         }
-        if else (islower(password[i]))
+        else if (islower(password[i]))
         {
             valid_lower = true;
         }
-        if else (isdigit(password[i]))
+        else if (isdigit(password[i]))
         {
             valid_digit = true;
         }
-        if else (ispunct(password[i]))
+        else if (ispunct(password[i]))
         {
-            valid_punc = true;
+            valid_punct = true;
         }
     }
     //
