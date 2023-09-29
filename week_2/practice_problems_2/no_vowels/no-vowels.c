@@ -17,9 +17,9 @@ int main(int argc, string argv[])
     replace(argv[1]);
 }
 
-string replace(string word)
+string replace(string word[])
 {
-    for (int i = 0; i <= strleng(word), i++)
+    for (int i = 0; i <= word[]; i++)
     {
         if (word[i] = 'A')
     }
