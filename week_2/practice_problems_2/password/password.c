@@ -5,6 +5,7 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <ctype.h>
+#include <string.h>
 
 bool valid(string password);
 
@@ -26,25 +27,25 @@ bool valid(string password)
 {
     for (int i = 0; i <= strlen(password); i++)
     {
-        if (isupper(password[i]) == FALSE)
+        if (isupper(password[i]))
         {
-            return false;
+            return true;
         }
-        else if (islower(password[i]) == FALSE)
+        else if (islower(password[i]))
         {
-            return false;
+            return true;
         }
-        else if (isdigit(password[i]) == FALSE)
+        else if (isdigit(password[i]))
         {
-            return false;
+            return true;
         }
-        else if (ispunct(password[i]) == FALSE)
+        else if (ispunct(password[i]))
         {
-            return false;
+            return true;
         }
         else
         {
-            return true;
+            return false;
         }
 
     }
