@@ -28,7 +28,7 @@ int main(void)
 float calc_hours(int hours[], int weeks, char output)
 {
     //Total
-    if (output == T)
+    if (output == 'T')
     {
         float total_hours = 0;
         for (int i = 0; i < weeks; i++)
@@ -36,5 +36,15 @@ float calc_hours(int hours[], int weeks, char output)
             total_hours += hours[i];
         }
         printf("%lu hours\n", total_hours);
+    } else if (output == 'A') //Average
+    {
+        float total_hours = 0;
+        float av_hours = 0;
+        for (int i = 0; i < weeks; i++)
+        {
+            total_hours += hours[i];
+        }
+        av_hours = total_hours / weeks;
+        printf("%lu hours\n", av_hours);
     }
 }
