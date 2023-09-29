@@ -8,5 +8,16 @@
 
 int main(int argc, string argv[])
 {
-    printf(")
+    if (argv[1] == NULL)
+    {
+        printf("Error\n");
+        return 1;
+    }
+
+    replace(argv[1]);
+}
+
+string replace(string word)
+{
+    
 }
