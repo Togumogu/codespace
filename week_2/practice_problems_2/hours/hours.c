@@ -27,11 +27,14 @@ int main(void)
 // TODO: complete the calc_hours function
 float calc_hours(int hours[], int weeks, char output)
 {
+    //Total
     if (output == T)
     {
-        for (int i = hours[]; i < weeks; i++)
+        float total_hours = 0;
+        for (int i = 0; i < weeks; i++)
         {
-
+            total_hours += hours[i];
         }
+        printf("%lu hours\n", total_hours);
     }
 }
