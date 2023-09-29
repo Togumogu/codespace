@@ -6,6 +6,8 @@
 #include <cs50.h>
 #include <stdio.h>
 
+string replace(string word);
+
 int main(int argc, string argv[])
 {
     if (argv[1] == NULL)
@@ -17,9 +19,9 @@ int main(int argc, string argv[])
     replace(argv[1]);
 }
 
-string replace(string word[])
+string replace(string word)
 {
-    for (int i = 0; i <= word[]; i++)
+    for (int i = 0; i <= word; i++)
     {
         if (word[i] = 'a')
         {
@@ -38,4 +40,5 @@ string replace(string word[])
             word[i] = '0';
         }
     }
+    printf("%s\n", word);
 }
