@@ -21,7 +21,8 @@ int main(int argc, string argv[])
 
 string replace(string word[])
 {
-    
+    int array_length = 0;
+    for (int i = 0; i )
     for (int i = 0; i <= word; i++)
     {
         if (word[i] = 'a')
