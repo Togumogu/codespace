@@ -25,7 +25,7 @@ bool valid(string password)
 {
     for (int i = 0; int <= strlen(password); i++)
     {
-        if (password[i] != )
+        if (password[i] != isupper)
     }
     return false;
 }
