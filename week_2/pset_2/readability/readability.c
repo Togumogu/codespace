@@ -1,5 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <ctype.h>
+#include <string.h>
 
 int main(void)
 {
@@ -9,7 +11,7 @@ int main(void)
     {
         user_input = get_string("Text: ");
     }
-    while ()
+    while (isxdigit(user_input));
     //store it in a string
     //count letter w islower is upper
     //count word w space isspace space + 1
