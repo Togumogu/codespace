@@ -38,10 +38,10 @@ int compute_score(string word)
 {
     // TODO: Compute and return score for string
     int player_score = 0;
-    word = toupper(word);
+    string upper_case = toupper(word);
     for (int i = 0; i <= strlen(word); i++)
     {
-        player_score += POINTS[word[i] - 65];
+        player_score += POINTS[upper_case[i] - 65];
     }
     return player_score;
 }
