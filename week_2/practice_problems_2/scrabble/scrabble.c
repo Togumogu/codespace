@@ -43,12 +43,12 @@ int compute_score(string word)
         // uppercase
         if (isupper(word[i]))
         {
-            player_score += POINTS[toupper(word[i]) - 65];
+            player_score += POINTS[(word[i]) - 65];
         }
         // lowercase
         else if (islower(word[i]))
         {
-            player_score += POINTS[toupper(word[i]) - 97];
+            player_score += POINTS[(word[i]) - 97];
         } else
         {
             return false;
