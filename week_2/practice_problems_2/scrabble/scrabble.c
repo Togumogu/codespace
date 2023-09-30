@@ -20,11 +20,11 @@ int main(void)
     int score2 = compute_score(word2);
 
     // TODO: Print the winner
-    if (word1 > word2)
+    if (score1 > score2)
     {
         printf("Player 1 Wins! %i\n", compute_score(word1));
     }
-    else if (word1 < word2)
+    else if (score1 < score2)
     {
         printf("Player 2 Wins! %i\n", compute_score(word2));
     }
