@@ -43,7 +43,7 @@ int get_cents(void)
     {
         cents_owed = get_int("Cents Owed?: ");
     }
-    while(cents_owed <= 0);
+    while (cents_owed <= 0);
     return cents_owed;
 }
 
@@ -98,4 +98,3 @@ int calculate_pennies(int cents)
     }
     return penny_no;
 }
-
