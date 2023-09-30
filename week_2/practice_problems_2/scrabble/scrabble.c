@@ -1,8 +1,9 @@
 #include <ctype.h>
 #include <cs50.h>
-#include <stdio.h>
+
 #include <string.h>
 
+#include <stdio.h>
 // Points assigned to each letter of the alphabet
 int POINTS[] = {1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10};
 
@@ -21,15 +22,9 @@ int main(void)
     // TODO: Print the winner
     if (score1 > score2)
     {
-        printf("Player 1 Wins!\n");
+        printf("Player 1 Wins!");
     }
-    else if (score2 > score1)
-    {
-        prinft("Player 2 Wins!\n");
-    } else
-    {
-        prinft("Tie!\n");
-    }
+    if else
 
 }
 
@@ -37,7 +32,7 @@ int compute_score(string word)
 {
     // TODO: Compute and return score for string
     int player_score = 0;
-    for (int i = 0; 0 =< strlen(word1); i++)
+    for (int i = 0; 0 <= strlen(word); i++)
     {
         word[i] = POINTS[i];
         player_score += word[i];
