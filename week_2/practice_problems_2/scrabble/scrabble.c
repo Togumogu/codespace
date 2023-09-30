@@ -40,10 +40,9 @@ int compute_score(string word)
     int player_score = 0;
     for (int i = 0; i <= strlen(word); i++)
     {
-        if(65 <= toupper(word[i]) <= 90)
-        {
+
         player_score += POINTS[toupper(word[i]) - 65];
-        }
+        
     }
     return player_score;
 }
