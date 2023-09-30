@@ -3,6 +3,8 @@
 #include <ctype.h>
 #include <string.h>
 
+int count_letters(string user_text);
+
 int main(void)
 {
     //ask for input only letters
@@ -17,4 +19,9 @@ int main(void)
         //if grade < 1 outout before grade 1
 }
 
-int count_letters(string user_text)
+int count_letters(string text)
+{
+    int letter_no = 0;
+
+    return letter_no;
+}
