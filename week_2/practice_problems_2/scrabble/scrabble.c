@@ -38,7 +38,7 @@ int compute_score(string word)
 {
     // TODO: Compute and return score for string
     int player_score = 0;
-    string
+    word = toupper(word);
     for (int i = 0; i <= strlen(word); i++)
     {
         player_score += POINTS[word[i] - 65];
