@@ -69,7 +69,7 @@ int calculate_dimes(int cents)
     do
     {
         minus_dimes = minus_dimes - 10;
-        minus_dimes++;
+        dime_no++;
     }
     while (minus_dimes >= 10);
     return dime_no;
