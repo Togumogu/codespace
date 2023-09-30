@@ -1,7 +1,12 @@
 #include <cs50.h>
 #include <stdio.h>
 
-int main(void) 
+int main(void)
 {
-
+    //ask for input only letters
+    //store it in a string
+    //count letter w islower is upper
+    //count word w space isspace space + 1
+    //count sent w . ! ? ispunct punct + 1 however no , ' : ;
+    //print grade x
 }
