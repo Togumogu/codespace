@@ -42,7 +42,7 @@ int compute_score(string word)
     {
 
         player_score += POINTS[toupper(word[i]) - 65];
-        
+
     }
     return player_score;
 }
