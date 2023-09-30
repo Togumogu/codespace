@@ -52,12 +52,11 @@ int calculate_quarters(int cents)
     // TODO
     int quarter_no = 0;
     int minus_quarters = cents;
-    do
+    while (minus_quarters >= 25)
     {
         minus_quarters = minus_quarters - 25;
         quarter_no++;
     }
-    while (minus_quarters >= 25);
     return quarter_no;
 }
 
@@ -66,12 +65,11 @@ int calculate_dimes(int cents)
     // TODO
     int dime_no = 0;
     int minus_dimes = cents;
-    do
+    while (minus_dimes >= 10)
     {
         minus_dimes = minus_dimes - 10;
         dime_no++;
     }
-    while (minus_dimes >= 10);
     return dime_no;
 }
 
@@ -80,12 +78,11 @@ int calculate_nickels(int cents)
     // TODO
     int nickel_no = 0;
     int minus_nickels = cents;
-    do
+    while (minus_nickels >= 5)
     {
         minus_nickels = minus_nickels - 5;
         nickel_no++;
     }
-    while (minus_nickels >= 5);
     return nickel_no;
 }
 
@@ -94,12 +91,11 @@ int calculate_pennies(int cents)
     // TODO
     int penny_no = 0;
     int minus_pennies = cents;
-    do
+    while (minus_pennies > 0)
     {
         minus_pennies = minus_pennies - 1;
         penny_no++;
     }
-    while (minus_pennies > 0);
     return penny_no;
 }
 
