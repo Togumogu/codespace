@@ -50,20 +50,43 @@ int get_cents(void)
 int calculate_quarters(int cents)
 {
     // TODO
+    int quarter_no = 0;
+    int minus_quarters = cents
     do
-    return 0;
+    {
+        minus_quaters = minus_quarters - 25;
+        quarter_no++
+    }
+    while (minus_quarters >= 25);
+    return minus_quarters;
 }
 
 int calculate_dimes(int cents)
 {
     // TODO
-    return 0;
+    int dime_no = 0;
+    int minus_dimes = cents
+    do
+    {
+        minus_dimes = minus_dimes - 10;
+        minus_dimes++
+    }
+    while (minus_dimes >= 10);
+    return minus_dimes;
 }
 
 int calculate_nickels(int cents)
 {
     // TODO
-    return 0;
+    int nickel_no = 0;
+    int minus_nickels = cents
+    do
+    {
+        minus_nickels = minus_nickels - 25;
+        nickel_no++
+    }
+    while (minus_nickels >= 5);
+    return minus_nickels;
 }
 
 int calculate_pennies(int cents)
