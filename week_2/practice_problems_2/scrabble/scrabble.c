@@ -38,8 +38,10 @@ int compute_score(string word)
 {
     // TODO: Compute and return score for string
     int player_score = 0;
+    int tmp = 0;
     for (int i = 0; i <= strlen(word); i++)
     {
+        tmp = POINTS[word[i] - 65];
         player_score += POINTS[word[i] - 65];
     }
     return player_score;
