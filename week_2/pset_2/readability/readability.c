@@ -6,12 +6,8 @@
 int main(void)
 {
     //ask for input only letters
-    string user_input;
-    do
-    {
-        user_input = get_string("Text: ");
-    }
-    while (isxdigit(user_input));
+    string user_input = get_string("Text: ");
+    printf("%s\n", user_input);
     //store it in a string
     //count letter w islower is upper
     //count word w space isspace space + 1
@@ -20,3 +16,5 @@ int main(void)
         //if grade > 16 output 16+
         //if grade < 1 outout before grade 1
 }
+
+int count_letters(string user_text)
