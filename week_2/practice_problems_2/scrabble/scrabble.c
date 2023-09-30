@@ -49,9 +49,6 @@ int compute_score(string word)
         else if (islower(word[i]))
         {
             player_score += POINTS[(word[i]) - 97];
-        } else
-        {
-            return false;
         }
     }
     return player_score;
