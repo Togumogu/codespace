@@ -4,6 +4,12 @@
 int main(void)
 {
     //ask for input only letters
+    string user_input;
+    do
+    {
+        user_input = get_string("Text: ");
+    }
+    while ()
     //store it in a string
     //count letter w islower is upper
     //count word w space isspace space + 1
