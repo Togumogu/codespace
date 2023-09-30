@@ -19,9 +19,23 @@ int main(void)
     int score2 = compute_score(word2);
 
     // TODO: Print the winner
+    if (score1 > score2)
+    {
+        prinft("Player 1 Wins!\n");
+    }
+    else if (score2 > score1)
+    {
+        prinft("Player 2 Wins!\n");
+    } else
+    {
+        prinft("Tie!\n");
+    }
+
 }
 
 int compute_score(string word)
 {
     // TODO: Compute and return score for string
+    int score_player_1 = 0;
+    int score_player_2 = 0;
 }
