@@ -1,21 +1,21 @@
 #include <cs50.h>
-#include <stdio.h>
 #include <ctype.h>
-#include <string.h>
 #include <math.h>
+#include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 char replace(char character, int key);
 
 int main(int argc, string argv[])
 {
-    //failsafe for no or more than 1 inputs
+    // failsafe for no or more than 1 inputs
     if (argc != 2)
     {
         printf("Usage: ./caesar key\n");
         return 1;
     }
-    //failsafe for non and negative number
+    // failsafe for non and negative number
     for (int i = 0; i < strlen(argv[1]); i++)
     {
         if (!isdigit(argv[1][i]))
@@ -24,7 +24,7 @@ int main(int argc, string argv[])
             return 1;
         }
     }
-    //get ready to rotate
+    // get ready to rotate
     string phrase = get_string("plaintext: ");
     /* Initially wrote this to convert 2 digit string into an integer turns out there is a function bruh
     //turn argv[1] into int
@@ -35,41 +35,40 @@ int main(int argc, string argv[])
         //
     }
     */
-    //turn argv[1] into int without wasting half an hour
+    // turn argv[1] into int without wasting half an hour
     int int_key = atoi(argv[1]);
-    //loop to feed every char to replace function
+    // loop to feed every char to replace function
     for (int i = 0; i < strlen(phrase); i++)
     {
         phrase[i] = replace(phrase[i], int_key);
     }
-    //print
+    // print
     printf("ciphertext: %s\n", phrase);
-
 }
-//replace function
+// replace function
 char replace(char character, int key)
 {
-    //check for letters
+    // check for letters
     if (isalpha(character))
     {
-        //modify key so ASCII wraps around the alphabet
+        // modify key so ASCII wraps around the alphabet
         while (key >= 26)
         {
             key = key - 26;
         }
-        //push char in reference to key
-        //push according to whether upper or lower
+        // push char in reference to key
+        // push according to whether upper or lower
         int alph_line = character;
-        if (isupper(character))     //e.g S is the 83th decimal in ASCII
+        if (isupper(character)) // e.g S is the 83th decimal in ASCII
         {
-            alph_line = alph_line - 64; //e.g. since its upper subtract 64 to find real place in alphabet - for S --> 19
+            alph_line = alph_line - 64; // e.g. since its upper subtract 64 to find real place in alphabet - for S --> 19
         }
         else if (islower(character))
         {
             alph_line = alph_line - 96;
         }
-        //if key is bigger than how many letters left
-        if (key > 26 - alph_line) //e.g. subtract S's row
+        // if key is bigger than how many letters left
+        if (key > 26 - alph_line) // e.g. subtract S's row
         {
             int char_ascii;
             char_ascii = character;
