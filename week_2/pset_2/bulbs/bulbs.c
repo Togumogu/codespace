@@ -9,7 +9,7 @@ void print_bulb(int bit);
 int main(void)
 {
     // TODO
-    //ask for input
+    // ask for input
     string user_input = get_string("Message?: ");
 
     for (int i = 0; i < strlen(user_input); i++)
@@ -18,8 +18,8 @@ int main(void)
         int divided = letter;
         int remainder;
         int binary[BITS_IN_BYTE];
-        //Create a reverse array
-        for (int j = BITS_IN_BYTE -1; j >= 0; j--)
+        // Create a reverse array
+        for (int j = BITS_IN_BYTE - 1; j >= 0; j--)
         {
             remainder = divided % 2;
             binary[j] = remainder;
