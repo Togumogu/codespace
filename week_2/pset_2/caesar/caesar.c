@@ -31,6 +31,7 @@ int main(int argc, string argv[])
     for (int i = 0; i < strlen(argv[1]); i++)
     {
         int_key = int_key + (argv[1][i] - 48) * pow(10, );
+        //
     }
     //loop to feed every char to replace function
     for (int i = 0; i < strlen(phrase); i++)
