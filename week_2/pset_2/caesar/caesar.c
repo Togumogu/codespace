@@ -25,10 +25,11 @@ int main(int argc, string argv[])
     //get ready to rotate
     string plaintext = get_string("plaintext: ");
     string phrase = plaintext;
+    int int_key = argv[1];
     //loop to feed every char to replace function
     for (int i = 0; i < strlen(phrase); i++)
     {
-        replace(phrase[i], argv[1]);
+        replace(phrase[i], int_key);
     }
     //print
     printf("plaintext: %s\n", plaintext);
