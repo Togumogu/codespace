@@ -27,10 +27,18 @@ int main(int argc, string argv[])
     {
         replace(phrase[i], argv[1]);
     }
+    
 }
 //replace function
 char replace(char character, int key)
 {
     //modify key so ASCII wraps around the alphabet
-    while (key)
+    while (key >= 26)
+    {
+        key = key - 26;
+    }
+    //push char in reference to key
+    //check for alphabetica
+    if (isalpha(character))
+
 }
