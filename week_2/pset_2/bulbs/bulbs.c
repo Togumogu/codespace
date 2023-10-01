@@ -17,7 +17,7 @@ int main(void)
         char letter = user_input[i];
         int divided = letter;
         int remainder;
-        int binary[BITS_IN_BYTE - 1];
+        int binary[BITS_IN_BYTE];
         for (int j = BITS_IN_BYTE -1; j >= 0; j--)
         {
             remainder = divided % 2;
