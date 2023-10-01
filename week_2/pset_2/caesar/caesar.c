@@ -20,4 +20,6 @@ int main(int argc, string argv[])
             return 1;
         }
     }
+    //get ready to rotate
+    string 
 }
