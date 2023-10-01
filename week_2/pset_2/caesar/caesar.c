@@ -38,7 +38,6 @@ int main(int argc, string argv[])
         replace(phrase[i], int_key);
     }
     //print
-    printf("plaintext: %s\n", plaintext);
     printf("ciphertext: %s\n", phrase);
 
 }
