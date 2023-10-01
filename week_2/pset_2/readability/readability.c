@@ -1,76 +1,105 @@
-#include <cs50.h>
 #include <stdio.h>
-#include <ctype.h>
+#include <cs50.h>
 #include <string.h>
+#include <ctype.h>
 #include <math.h>
 
-int count_letters(string user_text);
-int count_words(string text);
-int count_sentences(string text);
+float count_letters(string text, int str_length);
+float count_words(string text, int str_length);
+float count_sens(string text, int str_length);
 
 int main(void)
 {
-    //ask for input only letters
-    string user_input = get_string("Text: ");
-    printf("%i\n", count_letters(user_input));
-    printf("%i\n", count_words(user_input));
-    printf("%i\n", count_sentences(user_input));
-    //calculate grade
-    float av_letters = (count_letters(user_input) * 100) / count_words(user_input);
-    float av_sentences = (count_sentences(user_input) * 100) / count_words(user_input);
-    float score = (0.0588 * av_letters) - (0.296 * av_sentences) - 15.8;
-    int grade = round(score);
-    printf("%f\n", score);
-    //print grade
-    if (grade >= 16)
+    // Prompt user for text
+    string text = get_string("Text: ");
+
+    // Find length of text
+    int length = strlen(text);
+
+    // Find the number of letters in text
+    float letter_count = count_letters(text, length);
+
+    // Find the number of words in text
+    float word_count = count_words(text, length);
+
+    // Find the number of sentances in text
+    int sen_count = count_sens(text, length);
+
+    // Calculate the average number of letters and sentances per 100 words
+    int L = round((100 / word_count) * letter_count);
+    int S = round((100 / word_count) * sen_count);
+
+    // Calculate and show grade level
+    float index = 0.0588 * L - 0.296 * S - 15.8;
+    index = round(index);
+
+    if (index < 1)
     {
-        printf("Grade 16+\n");
+      printf("Before Grade 1\n");
     }
-    else if (grade < 1)
+    else if (index > 0 && index < 16)
     {
-        printf("Before Grade 1\n");
+        printf("Grade %i\n", (int) index);
     }
     else
     {
-        printf("Grade %i\n", grade);
+        printf("Grade 16+\n");
     }
 }
-// count letters
-int count_letters(string text)
+
+float count_letters(string text, int str_length)
 {
-    int letter_no = 0;
-    for (int i = 0; i <= strlen(text); i++)
+     int letters = 0;
+
+     // Checks every character
+     for (int i = 0; i < str_length; i++)
     {
-        if (isalpha(text[i]))
+        // Checks if it is a letter
+        if (isalpha(text[i]) != 0)
         {
-            letter_no++;
+            // If true, add one to number of letters
+            letters++;
         }
     }
-    return letter_no;
+    // Returns the number of letters
+    return letters;
 }
-// count words
-int count_words(string text)
+
+float count_words(string text, int str_length)
 {
-    int word_no = 1;
-    for (int i = 0; i <= strlen(text); i++)
+    int words = 0;
+
+    // Checks every character
+    for (int i = 0; i < str_length; i++)
     {
-        if (isspace(text[i]))
+        // Checks for a space
+        if(text[i] == 32)
         {
-            word_no++;
+            // If true, Add one to number of words
+            words++;
         }
     }
-    return word_no;
+    // Adds word from the end of text
+    words++;
+
+    // Returns the number of words
+    return words;
 }
-//count sentences
-int count_sentences(string text)
+
+float count_sens(string text, int str_length)
 {
-    int sentence_no = 0;
-    for (int i = 0; i <= strlen(text); i++)
+    int sentences = 0;
+
+    // Checks each character
+    for (int i = 0; i < str_length; i++)
     {
-        if (text[i] == '.' || text[i] == '!' || text[i] == '?')
+        // Checks for end of sentance
+        if (text[i] == '!' || text[i] == '.' || text[i] == '?')
         {
-            sentence_no++;
+            // If true, add one to the number of sentences
+            sentences++;
         }
     }
-    return sentence_no;
+    // Returns number of sentences
+    return sentences;
 }
