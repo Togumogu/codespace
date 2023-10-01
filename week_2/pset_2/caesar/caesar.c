@@ -62,7 +62,10 @@ char replace(char character, int key)
         alph_line = alph_line - 64;
         if (key > 26 - alph_line)
         {
-            
+            int char_ascii;
+            char_ascii = character;
+            char_ascii = char_ascii + key;
+            character = char_ascii;
         }
 
         int char_ascii;
