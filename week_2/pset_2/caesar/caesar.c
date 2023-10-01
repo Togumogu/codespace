@@ -60,15 +60,16 @@ char replace(char character, int key)
         //push char in reference to key
         //push according to whether upper or lower
         int alph_line = character;
-        if (isupper(character))
+        if (isupper(character))     //e.g S is the 83th decimal in ASCII
         {
-            alph_line = alph_line - 64;
+            alph_line = alph_line - 64; //e.g. since its upper subtract 64 to find real place in alphabet - for S --> 19
         }
         else if (islower(character))
         {
             alph_line = alph_line - 96;
         }
-        if (key > 26 - alph_line)
+        //if key is bigger than how many letters left
+        if (key > 26 - alph_line) //e.g. subtract S's row
         {
             int char_ascii;
             char_ascii = character;
