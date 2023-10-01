@@ -21,5 +21,15 @@ int main(int argc, string argv[])
         }
     }
     //get ready to rotate
-    string 
+    string phrase = get_string("plaintext: ");
+    //loop to feed every char to replace function
+    for (int i = 0; i < strlen(phrase); i++)
+    {
+        replace(phrase[i], argv[1]);
+    }
+}
+//replace function
+char replace(char character, int key)
+{
+    //
 }
