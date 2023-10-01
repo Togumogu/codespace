@@ -18,7 +18,7 @@ int main(void)
         int divided = letter;
         int remainder;
         int binary[7];
-        for (int j = 0; j < BITS_IN_BYTE; j++)
+        for (int j = BITS_IN_BYTE; j > 0; j--)
         {
             remainder = divided % 2;
             print_bulb(remainder);
