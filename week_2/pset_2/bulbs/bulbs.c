@@ -18,12 +18,16 @@ int main(void)
         int divided = letter;
         int remainder;
         int binary[BITS_IN_BYTE];
+        //Create a reverse array
         for (int j = BITS_IN_BYTE -1; j >= 0; j--)
         {
             remainder = divided % 2;
             binary[j] = remainder;
-            print_bulb(binary[j]);
             divided = divided / 2;
+        }
+        for (int j = 0; j < BITS_IN_BYTE; i++)
+        {
+            print_bulb(binary[j]);
         }
         printf("\n");
     }
