@@ -25,7 +25,12 @@ int main(int argc, string argv[])
     //get ready to rotate
     string plaintext = get_string("plaintext: ");
     string phrase = plaintext;
-    int int_key = argv[1];
+    //turn argv[1] into int
+    int int_key;
+    for (int i = 0; i < strlen(argv[1]); i++)
+    {
+        int_key = int_key + argv[1][i] * 10
+    }
     //loop to feed every char to replace function
     for (int i = 0; i < strlen(phrase); i++)
     {
