@@ -31,5 +31,6 @@ int main(int argc, string argv[])
 //replace function
 char replace(char character, int key)
 {
-    //
+    //modify key so ASCII wraps around the alphabet
+    while (key)
 }
