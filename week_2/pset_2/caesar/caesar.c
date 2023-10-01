@@ -1,13 +1,21 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <ctype.h>
+#include <string.h>
 
 int main(int argc, string argv[])
 {
-    isdigit(argv[1]);
-    if (argv[1] == false || argv[1] < 0 || argv[2])
+    if (argc != 2)
     {
         printf("Usage: ./caesar key\n");
         return 1;
+    }
+    for (int i = 0; i < strlen(argv[1]))
+    {
+        if (!isdigit(argv[1][i]))
+        {
+            printf("Usage: ./caesar key\n");
+            return 1;
+        }
     }
 }
