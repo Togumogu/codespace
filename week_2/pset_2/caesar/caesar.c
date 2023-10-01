@@ -27,7 +27,9 @@ int main(int argc, string argv[])
     {
         replace(phrase[i], argv[1]);
     }
-    
+    //print
+    printf("%s\n", phrase)
+
 }
 //replace function
 char replace(char character, int key)
@@ -39,6 +41,11 @@ char replace(char character, int key)
     }
     //push char in reference to key
     //check for alphabetica
+    int char_ascii;
     if (isalpha(character))
-
+    {
+        char_ascii = character;
+        char_ascii = char_ascii + key;
+        character = char_ascii
+    }
 }
