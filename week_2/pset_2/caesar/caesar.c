@@ -61,18 +61,18 @@ char replace(char character, int key)
         int alph_line = character;
         if (isupper(character)) // e.g S is the 83th decimal in ASCII
         {
-            alph_line = alph_line - 64; // e.g. since its upper subtract 64 to find real place in alphabet - for S --> 19
+            alph_line = alph_line - 64; // e.g. since its upper, subtract 64 to find real place in alphabet, for S --> 83 - 64 = 19
         }
         else if (islower(character))
         {
             alph_line = alph_line - 96;
         }
         // if key is bigger than how many letters left
-        if (key > 26 - alph_line) // e.g. subtract S's row
-        {
+        if (key > 26 - alph_line) // e.g. subtract S's row from the total number of letter in the alphabet to see how many letters after S --> 26 - 19 = 7
+        {                         // e.g. 7 is smaller than the key, so instead of going forward the amount of the key
             int char_ascii;
             char_ascii = character;
-            char_ascii = char_ascii - (26 - key);
+            char_ascii = char_ascii - (26 - key); // e.g. we go back 26 - 13  to "wrap" around the alphabet
             character = char_ascii;
         }
         else
@@ -83,5 +83,6 @@ char replace(char character, int key)
             character = char_ascii;
         }
     }
+    // return
     return character;
 }
