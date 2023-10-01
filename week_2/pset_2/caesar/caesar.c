@@ -58,41 +58,29 @@ char replace(char character, int key)
             key = key - 26;
         }
         //push char in reference to key
+        //push according to whether upper or lower
+        int alph_line = character;
         if (isupper(character))
         {
-            int alph_line = character;
             alph_line = alph_line - 64;
-            if (key > 26 - alph_line)
-            {
-                int char_ascii;
-                char_ascii = character;
-                char_ascii = char_ascii - (26 - key);
-                character = char_ascii;
-            } else
-            {
-                int char_ascii;
-                char_ascii = character;
-                char_ascii = char_ascii + key;
-                character = char_ascii;
-            }
         }
         else if (islower(character))
         {
-            int alph_line = character;
             alph_line = alph_line - 96;
-            if (key > 26 - alph_line)
-            {
-                int char_ascii;
-                char_ascii = character;
-                char_ascii = char_ascii - (26 - key);
-                character = char_ascii;
-            } else
-            {
-                int char_ascii;
-                char_ascii = character;
-                char_ascii = char_ascii + key;
-                character = char_ascii;
-            }
+        }
+        if (key > 26 - alph_line)
+        {
+            int char_ascii;
+            char_ascii = character;
+            char_ascii = char_ascii - (26 - key);
+            character = char_ascii;
+        }
+        else
+        {
+            int char_ascii;
+            char_ascii = character;
+            char_ascii = char_ascii + key;
+            character = char_ascii;
         }
     }
     return character;
