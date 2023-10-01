@@ -12,7 +12,7 @@ int main(void)
     //ask for input
     string user_input = get_string("Message?: ");
 
-    for (int i = 0; i <= strlen(user_input); i++)
+    for (int i = 0; i < strlen(user_input); i++)
     {
         char letter = user_input[i];
         int divided = letter;
