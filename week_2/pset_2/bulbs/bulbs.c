@@ -15,9 +15,11 @@ int main(void)
     for (int i = 0; i <= strlen(user_input); i++)
     {
         char letter = user_input[i];
+        int divided = letter;
+        
         for (int j = BITS_IN_BYTE; j > 0; j--)
         {
-            print_bulb(letter);
+
         }
     }
 }
