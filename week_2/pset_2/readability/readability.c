@@ -17,11 +17,8 @@ int main(void)
     printf("%i words\n", count_words(user_input));
     //print sentences
     printf("%i sentences\n", count_sentences(user_input));
-    //count word w space isspace space + 1
-    //count sent w . ! ? ispunct punct + 1 however no , ' : ;
-    //print grade x
-        //if grade > 16 output 16+
-        //if grade < 1 outout before grade 1
+    //calculate grade
+    int 
 }
 // count letters
 int count_letters(string text)
