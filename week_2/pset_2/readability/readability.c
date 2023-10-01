@@ -18,7 +18,8 @@ int main(void)
     //print sentences
     printf("%i sentences\n", count_sentences(user_input));
     //calculate grade
-    float av_letters = ()
+    float av_letters = (count_letters(user_input) * 100) / count_words(user_input);
+    float av_sentences = (count_letters(user_input) * 100) / count_words(user_input);
     float grade = 0.0588 * av_letters - 0.296 * av_sentences - 15.8
 }
 // count letters
