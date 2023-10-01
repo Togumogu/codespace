@@ -1,9 +1,11 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <ctype.h>
 
 int main(int argc, string argv[])
 {
-    if (argv[1] == NULL)
+    if (isdigit(argv[1]) == 0 || argv[1] < 0 || argv[2])
     {
-        printf("Usage:)
+        printf("Usage: ./caesar key\n");
+        return true
     }
