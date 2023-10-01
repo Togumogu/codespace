@@ -15,6 +15,8 @@ int main(void)
     printf("%i letters\n", count_letters(user_input));
     //print words
     printf("%i words\n", count_words(user_input));
+    //print sentences
+    printf("%i sentences\n", count_sentences(user_input));
     //count word w space isspace space + 1
     //count sent w . ! ? ispunct punct + 1 however no , ' : ;
     //print grade x
@@ -40,7 +42,7 @@ int count_words(string text)
     int word_no = 1;
     for (int i = 0; i <= strlen(text); i++)
     {
-        if (isblank(text[i]))
+        if (isspace(text[i]))
         {
             word_no++;
         }
@@ -50,5 +52,13 @@ int count_words(string text)
 //count sentences
 int count_sentences(string text)
 {
-    int sentence_no
+    int sentence_no = 1;
+    for (int i = 0; i <= strlen(text); i++)
+    {
+        if (ispunct(text[i]))
+        {
+            sentence_no++;
+        }
+    }
+    return sentence_no;
 }
