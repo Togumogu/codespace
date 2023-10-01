@@ -4,8 +4,9 @@
 
 int main(int argc, string argv[])
 {
-    if (isdigit(argv[1]) == 0 || argv[1] < 0 || argv[2])
+    if (argv[1] == false || argv[1] < 0 || argv[2])
     {
         printf("Usage: ./caesar key\n");
-        return true
+        return true;
     }
+}
