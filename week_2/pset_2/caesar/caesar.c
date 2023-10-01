@@ -29,7 +29,7 @@ int main(int argc, string argv[])
     int int_key;
     for (int i = 0; i < strlen(argv[1]); i++)
     {
-        int_key = int_key + argv[1][i] * 10
+        int_key = int_key + argv[1][i] * (10 * i)
     }
     //loop to feed every char to replace function
     for (int i = 0; i < strlen(phrase); i++)
