@@ -3,6 +3,8 @@
 #include <ctype.h>
 #include <string.h>
 
+char replace(char character, int key);
+
 int main(int argc, string argv[])
 {
     //failsafe for no or more than 1 inputs
