@@ -64,7 +64,7 @@ char replace(char character, int key)
         {
             int char_ascii;
             char_ascii = character;
-            char_ascii = char_ascii + key;
+            char_ascii = char_ascii - (26 - key);
             character = char_ascii;
         }
 
