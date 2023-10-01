@@ -3,6 +3,7 @@
 #include <ctype.h>
 #include <string.h>
 #include <math.h>
+#include <stdlib.h>
 
 char replace(char character, int key);
 
@@ -26,6 +27,7 @@ int main(int argc, string argv[])
     //get ready to rotate
     string plaintext = get_string("plaintext: ");
     string phrase = plaintext;
+    /* Initially wrote this to convert 2 digit string into an integer turns out there is a function bruh
     //turn argv[1] into int
     int int_key;
     for (int i = 0; i < strlen(argv[1]); i++)
@@ -33,6 +35,9 @@ int main(int argc, string argv[])
         int_key = int_key + (argv[1][i] - 48) * pow(10, strlen(argv[1]) - i -1);
         //
     }
+    */
+    //turn argv[1] into int without wasting half an hour
+    int int_key = atoi(argv[1]);
     //loop to feed every char to replace function
     for (int i = 0; i < strlen(phrase); i++)
     {
@@ -45,16 +50,17 @@ int main(int argc, string argv[])
 //replace function
 char replace(char character, int key)
 {
-    //modify key so ASCII wraps around the alphabet
-    while (key >= 26)
-    {
-        key = key - 26;
-    }
-    //push char in reference to key
     //check for letters
-    int char_ascii;
     if (isalpha(character))
     {
+        //modify key so ASCII wraps around the alphabet
+        while (key >= 26)
+        {
+            key = key - 26;
+        }
+        //push char in reference to key
+
+        int char_ascii;
         char_ascii = character;
         char_ascii = char_ascii + key;
         character = char_ascii;
