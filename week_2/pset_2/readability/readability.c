@@ -52,10 +52,10 @@ int count_words(string text)
 //count sentences
 int count_sentences(string text)
 {
-    int sentence_no = 1;
+    int sentence_no = 0;
     for (int i = 0; i <= strlen(text); i++)
     {
-        if (ispunct(text[i]))
+        if (text[i] == '.' || text[i] == '!' || text[i] == '?')
         {
             sentence_no++;
         }
