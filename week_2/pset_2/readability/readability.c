@@ -4,13 +4,16 @@
 #include <string.h>
 
 int count_letters(string user_text);
+int count_words(string text);
 
 int main(void)
 {
     //ask for input only letters
     string user_input = get_string("Text: ");
     //printf letters
-    printf("%i\n", count_letters(user_input));
+    printf("%i letters\n", count_letters(user_input));
+    //print words
+    printf("%i words\n", count_words(user_input));
     //count word w space isspace space + 1
     //count sent w . ! ? ispunct punct + 1 however no , ' : ;
     //print grade x
@@ -32,3 +35,19 @@ int count_letters(string text)
 }
 // count words
 int count_words(string text)
+{
+    int word_no = 1;
+    for (int i = 0; i <= strlen(text); i++)
+    {
+        if (isblank(text[i]))
+        {
+            word_no++;
+        }
+    }
+    return word_no;
+}
+//count sentences
+int count_sents(string text)
+{
+    int sent_no
+}
