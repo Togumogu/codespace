@@ -12,6 +12,9 @@ int main(void)
 {
     //ask for input only letters
     string user_input = get_string("Text: ");
+    printf("%i\n", count_letters(user_input));
+    printf("%i\n", count_words(user_input));
+    printf("%i\n", count_sentences(user_input));
     //calculate grade
     float av_letters = (count_letters(user_input) * 100) / count_words(user_input);
     float av_sentences = (count_sentences(user_input) * 100) / count_words(user_input);
