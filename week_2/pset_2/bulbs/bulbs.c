@@ -9,6 +9,12 @@ void print_bulb(int bit);
 int main(void)
 {
     // TODO
+    //ask for input
+    string user_input = get_string("Message?: ");
+    for (int i = 0; i <= strlen(user_input); i++)
+    {
+        
+    }
 }
 
 void print_bulb(int bit)
