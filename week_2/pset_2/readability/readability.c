@@ -20,6 +20,7 @@ int main(void)
     float av_sentences = (count_sentences(user_input) * 100) / count_words(user_input);
     float score = 0.0588 * av_letters - 0.296 * av_sentences - 15.8;
     int grade = round(score);
+    printf("%f\n", score);
     //print grade
     if (grade >= 16)
     {
