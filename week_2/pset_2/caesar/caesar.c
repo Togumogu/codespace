@@ -42,7 +42,7 @@ char replace(char character, int key)
         key = key - 26;
     }
     //push char in reference to key
-    //check for alphabetica
+    //check for letters
     int char_ascii;
     if (isalpha(character))
     {
