@@ -27,7 +27,7 @@ int main(int argc, string argv[])
     string plaintext = get_string("plaintext: ");
     string phrase = plaintext;
     //turn argv[1] into int
-    int int_key = argv[1][0];
+    int int_key = argv[1][1];
     for (int i = 0; i < strlen(argv[1]); i++)
     {
         int_key = int_key + argv[1][i] * pow(10, i);
