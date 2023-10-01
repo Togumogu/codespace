@@ -5,6 +5,7 @@
 
 int count_letters(string user_text);
 int count_words(string text);
+int count_sentences(string text);
 
 int main(void)
 {
@@ -47,7 +48,7 @@ int count_words(string text)
     return word_no;
 }
 //count sentences
-int count_sents(string text)
+int count_sentences(string text)
 {
-    int sent_no
+    int sentence_no
 }
