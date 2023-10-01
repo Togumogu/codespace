@@ -68,18 +68,19 @@ char replace(char character, int key)
             alph_line = alph_line - 96;
         }
         // if key is bigger than how many letters left
-        if (key > 26 - alph_line) // e.g. subtract S's row from the total number of letter in the alphabet to see how many letters after S --> 26 - 19 = 7
+        if (key > 26 - alph_line) // e.g. subtract S's row from the total number of letter in the alphabet to see how many letters
+                                  // after S --> 26 - 19 = 7
         {                         // e.g. 7 is smaller than the key, so instead of going forward the amount of the key
             int char_ascii;
             char_ascii = character;
-            char_ascii = char_ascii - (26 - key); // e.g. we go back 26 - 13  to "wrap" around the alphabet
+            char_ascii = char_ascii - (26 - key); // e.g. we go back minus 26 - 13 times to "wrap" around the alphabet
             character = char_ascii;
         }
         else
         {
             int char_ascii;
             char_ascii = character;
-            char_ascii = char_ascii + key;
+            char_ascii = char_ascii + key; // e.g. if key is smaller or equal we simply go forward
             character = char_ascii;
         }
     }
