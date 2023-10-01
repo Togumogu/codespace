@@ -21,7 +21,8 @@ int main(void)
         for (int j = BITS_IN_BYTE -1; j >= 0; j--)
         {
             remainder = divided % 2;
-            print_bulb(remainder);
+            binary[j] = remainder;
+            print_bulb(binary[j]);
             divided = divided / 2;
         }
         printf("\n");
