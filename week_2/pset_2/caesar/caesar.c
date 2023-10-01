@@ -21,14 +21,16 @@ int main(int argc, string argv[])
         }
     }
     //get ready to rotate
-    string phrase = get_string("plaintext: ");
+    string plaintext = get_string("plaintext: ");
+    string phrase = plaintext;
     //loop to feed every char to replace function
     for (int i = 0; i < strlen(phrase); i++)
     {
         replace(phrase[i], argv[1]);
     }
     //print
-    printf("%s\n", phrase)
+    printf("plaintext: %s\n", plaintext);
+    printf("ciphertext: %s\n", phrase);
 
 }
 //replace function
