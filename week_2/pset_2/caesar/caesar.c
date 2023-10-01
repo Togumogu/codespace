@@ -28,7 +28,7 @@ int main(int argc, string argv[])
     string phrase = plaintext;
     //turn argv[1] into int
     int int_key;
-    for (int i = 0; i < strlen(argv[1]); i++)
+    for (int i = strlen(argv[1]) - 1; i > 0; i++)
     {
         int_key = int_key + (argv[1][i] - 48) * pow(10, i);
     }
