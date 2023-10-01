@@ -25,7 +25,7 @@ int main(void)
             binary[j] = remainder;
             divided = divided / 2;
         }
-        for (int j = 0; j < BITS_IN_BYTE; i++)
+        for (int j = 0; j < BITS_IN_BYTE; j++)
         {
             print_bulb(binary[j]);
         }
