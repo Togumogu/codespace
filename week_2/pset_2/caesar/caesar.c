@@ -27,10 +27,10 @@ int main(int argc, string argv[])
     string plaintext = get_string("plaintext: ");
     string phrase = plaintext;
     //turn argv[1] into int
-    int int_key = argv[1][0];
+    int int_key;
     for (int i = 0; i < strlen(argv[1]); i++)
     {
-        int_key = int_key + argv[1][i] * pow(10, i);
+        int_key = int_key + (argv[1][i] - 48) * pow(10, i);
     }
     //loop to feed every char to replace function
     for (int i = 0; i < strlen(phrase); i++)
