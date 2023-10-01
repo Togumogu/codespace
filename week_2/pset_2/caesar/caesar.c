@@ -25,8 +25,7 @@ int main(int argc, string argv[])
         }
     }
     //get ready to rotate
-    string plaintext = get_string("plaintext: ");
-    string phrase = plaintext;
+    string phrase = get_string("plaintext: ");
     /* Initially wrote this to convert 2 digit string into an integer turns out there is a function bruh
     //turn argv[1] into int
     int int_key;
@@ -41,7 +40,7 @@ int main(int argc, string argv[])
     //loop to feed every char to replace function
     for (int i = 0; i < strlen(phrase); i++)
     {
-        replace(phrase[i], int_key);
+        phrase[i] = replace(phrase[i], int_key);
     }
     //print
     printf("ciphertext: %s\n", phrase);
