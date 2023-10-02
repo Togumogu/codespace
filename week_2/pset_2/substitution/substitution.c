@@ -29,6 +29,12 @@ int main(int argc, string argv[])
     {
         cipher[i] = toupper(cipher[i]);
     }
+    //count if every char is once
+    int alp_count[26];
+    for (int i = 0; i < strlen(cipher); i++)
+    {
+        
+    }
     // get ready to rotate
     string phrase = get_string("plaintext: ");
     // feed phrase into sub func
