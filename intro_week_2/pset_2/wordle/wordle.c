@@ -33,12 +33,13 @@ int main(int argc, string argv[])
         printf("Error: wordsize must be either 5, 6, 7, or 8\n");
         return 1;
     }
-    // failsafe for non and negative number
-    if (argv[1][0] != 1)
+    // failsafe for double digits
+    if (argv[1][1])
     {
         printf("Error: wordsize must be either 5, 6, 7, or 8\n");
         return 1;
     }
+    int word_count = argv[1][0];
 
     int wordsize = 0;
 
