@@ -90,7 +90,6 @@ int main(int argc, string argv[])
     for (int i = 0; i < guesses; i++)
     {
         // obtain user's guess
-        printf("Choose %s: \n", choice); ///REMOVE REMOVE
         string guess = get_guess(wordsize);
 
         // array to hold guess status, initially set to zero
@@ -106,7 +105,7 @@ int main(int argc, string argv[])
         int score = check_word(guess, wordsize, status, choice);
 
         printf("Guess %i: ", i + 1);
-        printf("Score %i: ", score);
+
         // Print the guess
         print_word(guess, wordsize, status);
 
@@ -174,6 +173,8 @@ void print_word(string guess, int wordsize, int status[])
 {
     // print word character-for-character with correct color coding, then reset terminal font to normal
     // TODO #6
+    // iterate through status to get color codes
+    for (int i = 0; i)
 
     printf("\n");
     return;
