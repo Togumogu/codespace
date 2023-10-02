@@ -2,7 +2,8 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
-//need to fix different inputs same letter
+
+char substitute(char letter, string code);
 
 int main(int argc, string argv[])
 {
@@ -22,11 +23,11 @@ int main(int argc, string argv[])
             printf("Usage: ./caesar key\n");
             return 1;
         }
+    }
     // caps for code so easier
     for (int i = 0; i < strlen(cipher); i++)
     {
         cipher[i] = toupper(cipher[i]);
-    }
     }
     // get ready to rotate
     string phrase = get_string("plaintext: ");
