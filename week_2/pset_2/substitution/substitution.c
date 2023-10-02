@@ -6,7 +6,7 @@
 int main(int argc, string argv[])
 {
     // failsafe for no or more than 1 inputs
-    if (argc != 2)
+    if (argc != 2 || strlen(argv[1]) != 26)
     {
         printf("Usage: ./caesar key\n");
         return 1;
@@ -16,7 +16,7 @@ int main(int argc, string argv[])
     // failsafe for non alphabetical input
     for (int i = 0; i < strlen(cipher); i++)
     {
-        if (!isalpha(cipher[i]) ||)
+        if (!isalpha(cipher[i]))
         {
             printf("Usage: ./caesar key\n");
             return 1;
