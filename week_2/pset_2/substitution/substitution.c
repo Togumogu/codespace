@@ -35,7 +35,7 @@ int main(int argc, string argv[])
     {
         int alph_row_main = cipher[i];
         alph_row_main = alph_row_main - 64;
-        alp_count[alph_row_main]++;
+        alp_count[alph_row_main - 1]++;
     }
     //if any count is bigger than 1 return
     for (int i = 0; i < 26; i++)
