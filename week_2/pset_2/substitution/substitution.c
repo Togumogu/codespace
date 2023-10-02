@@ -1,6 +1,6 @@
 #include <cs50.h>
-#include <stdio.h>
 #include <ctype.h>
+#include <stdio.h>
 #include <string.h>
 
 char substitute(char letter, string code);
@@ -13,7 +13,7 @@ int main(int argc, string argv[])
         printf("Usage: ./caesar key\n");
         return 1;
     }
-    //store argv[1]
+    // store argv[1]
     string cipher = argv[1];
     // failsafe for non alphabetical input
     for (int i = 0; i < strlen(cipher); i++)
@@ -36,32 +36,28 @@ int main(int argc, string argv[])
     {
         phrase[i] = substitute(phrase[i], cipher);
     }
-    //print cipher text
+    // print cipher text
     printf("ciphertext: %s\n", phrase);
-
 }
-//substitute funtion
+// substitute funtion
 char substitute(char letter, string code)
 {
-    //only move letters
+    // only move letters
     if (isalpha(letter))
     {
         int alp_row = letter;
-        //if uppercase
-        if(isupper(letter))
+        // if uppercase
+        if (isupper(letter))
         {
             alp_row = alp_row - 64;
-            letter = code[alp_row -1];
+            letter = code[alp_row - 1];
         }
-        //if lowercase
+        // if lowercase
         else if (islower(letter))
         {
             alp_row = alp_row - 96;
-            letter = tolower(code[alp_row -1]);
+            letter = tolower(code[alp_row - 1]);
         }
     }
     return letter;
 }
-
-//find which row
-//then array[row]
