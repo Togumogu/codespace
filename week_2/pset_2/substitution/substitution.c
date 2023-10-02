@@ -33,23 +33,31 @@ int main(int argc, string argv[])
     // feed phrase into sub func
     for (int i = 0; strlen(phrase); i++)
     {
-        phrase[i] = substitute(phrase[i], cipher[i]);
+        phrase[i] = substitute(phrase[i], cipher);
     }
     //print cipher text
     printf("ciphertext: %s\n", phrase);
 
 }
 //substitute funtion
-char substitute(char letter, char code)
+char substitute(char letter, string code)
 {
     //only move letters
     if (isalpha(letter))
     {
+        int alp_row = letter;
+        //if uppercase
         if(isupper(letter))
         {
-            
+            alp_row = alp_row - 64;
+            letter = code[alp_row];
         }
-
+        //if lowercase
+        else if (islower(letter))
+        {
+            alp_row = alp_row - 96;
+            letter = tolower(code[alp_row]);
+        }
     }
     return letter;
 }
