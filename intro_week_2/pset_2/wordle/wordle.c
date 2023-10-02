@@ -148,6 +148,7 @@ int check_word(string guess, int wordsize, int status[], string choice)
     // iterate over each letter of guess
     for (int i = 0 ; i < strlen(guess); i++)
     {
+        guess[i];
         
     }
 
