@@ -29,7 +29,7 @@ int main(int argc, string argv[])
     {
         cipher[i] = toupper(cipher[i]);
     }
-    //count if every char is once
+    // count if every char is once
     int alp_count[26];
     for (int i = 0; i < strlen(cipher); i++)
     {
@@ -38,7 +38,7 @@ int main(int argc, string argv[])
         alp_count[alph_row_main - 1] = 0;
         alp_count[alph_row_main - 1]++;
     }
-    //if any count is bigger than 1 return
+    // if any count is bigger than 1 return
     for (int i = 0; i < 26; i++)
     {
         if (alp_count[i] != 1)
