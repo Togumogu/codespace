@@ -1,5 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <ctype.h>
 
 int main(int argc, string argv[])
 {
@@ -9,19 +10,16 @@ int main(int argc, string argv[])
         printf("Usage: ./caesar key\n");
         return 1;
     }
-    // failsafe for non and negative number
-    for (int i = 0; i < strlen(argv[1]); i++)
+    // failsafe for non alphabetical input
+    if (!isalpha(argv[1]))
     {
-        if (!isdigit(argv[1][i]))
-        {
-            printf("Usage: ./caesar key\n");
-            return 1;
-        }
+        printf("Usage: ./caesar key\n");
+        return 1;
     }
     //store argv[1]
     string cipher = argv[1];
     // get ready to rotate
     string phrase = get_string("plaintext: ");
 }
-
+//replace funtion
 //to upper
