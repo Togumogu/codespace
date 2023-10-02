@@ -176,10 +176,11 @@ void print_word(string guess, int wordsize, int status[])
     // iterate through status to get color codes
     for (int i = 0; i < wordsize; i++)
     {
-        if(status[i] == 1)
+        if (status[i] == 1)
         {
-            printf(GREEN"%)
+            printf(GREEN"%c"RESET"", guess[i]);
         }
+        else if ()
     }
 
     printf("\n");
