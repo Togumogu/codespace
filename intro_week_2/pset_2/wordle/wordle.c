@@ -107,6 +107,7 @@ int main(int argc, string argv[])
         printf("Guess %i: ", i + 1);
 
         // Print the guess
+        printf("choice: %s\n", choice);
         print_word(guess, wordsize, status);
 
         // if they guessed it exactly right, set terminate loop
