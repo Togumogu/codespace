@@ -18,6 +18,10 @@ int main(int argc, string argv[])
             return 1;
         }
     }
+    //store argv[1]
+    string cipher = argv[1];
     // get ready to rotate
     string phrase = get_string("plaintext: ");
 }
+
+//to upper
