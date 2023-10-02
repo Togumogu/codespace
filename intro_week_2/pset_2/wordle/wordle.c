@@ -90,7 +90,7 @@ int main(int argc, string argv[])
     for (int i = 0; i < guesses; i++)
     {
         // obtain user's guess
-        printf("choice: %s\n", choice); //REMOVEVEVEV
+        printf("Choose %s: \n", choice); ///REMOVE REMOVE
         string guess = get_guess(wordsize);
 
         // array to hold guess status, initially set to zero
@@ -106,7 +106,7 @@ int main(int argc, string argv[])
         int score = check_word(guess, wordsize, status, choice);
 
         printf("Guess %i: ", i + 1);
-
+        printf("Score %i: ", score);
         // Print the guess
         print_word(guess, wordsize, status);
 
