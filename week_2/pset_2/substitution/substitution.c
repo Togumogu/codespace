@@ -32,7 +32,7 @@ int main(int argc, string argv[])
     // get ready to rotate
     string phrase = get_string("plaintext: ");
     // feed phrase into sub func
-    for (int i = 0; strlen(phrase); i++)
+    for (int i = 0; i < strlen(phrase); i++)
     {
         phrase[i] = substitute(phrase[i], cipher);
     }
