@@ -26,7 +26,20 @@ int main(int argc, string argv[])
     }
     // get ready to rotate
     string phrase = get_string("plaintext: ");
-    
+
 }
 //replace funtion
+char substitute(char letter, string code)
+{
+    //all caps code
+    code = 
+    //only move letters
+    if (isalpha(letter))
+    {
+        //all caps
+
+    }
+    return letter;
+}
+
 //to upper
