@@ -33,7 +33,18 @@ int main(int argc, string argv[])
     int alp_count[26];
     for (int i = 0; i < strlen(cipher); i++)
     {
-        
+        int alph_row_main = cipher[i];
+        alph_row_main = alph_row_main - 64;
+        alp_count[alph_row_main]++;
+    }
+    //if any count is bigger than 1 return
+    for (int i = 0; i < 26; i++)
+    {
+        if (alp_count[i] != 1)
+        {
+            printf("Usage: ./caesar key\n");
+            return 1;
+        }
     }
     // get ready to rotate
     string phrase = get_string("plaintext: ");
