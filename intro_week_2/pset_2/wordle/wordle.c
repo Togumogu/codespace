@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <time.h>
+#include <ctype.h>
 
 // each of our text files contains 1000 words
 #define LISTSIZE 1000
@@ -33,6 +34,15 @@ int main(int argc, string argv[])
         printf("Error: wordsize must be either 5, 6, 7, or 8\n");
         return 1;
     }
+    // failsafe for non and negative number
+    for (int i = 0; i < strlen(argv[1]); i++)
+    {
+        if (!isdigit(argv[1][i]))
+        {
+            printf("Error: wordsize must be either 5, 6, 7, or 8\n");
+            return 1;
+        }
+    }
     // failsafe for double digits
     if (argv[1][1])
     {
@@ -42,7 +52,11 @@ int main(int argc, string argv[])
     // store input in wordsize & failsafe for non 5, 6, 7 and 8
     int wordsize = 0;
     wordsize = argv[1][0] - 48;
-
+    if (wordsize < 5 && wordsize > 8)
+    {
+        printf("Error: wordsize must be either 5, 6, 7, or 8\n");
+        return 1;
+    }
     // ensure argv[1] is either 5, 6, 7, or 8 and store that value in wordsize instead
     // TODO #2
 
