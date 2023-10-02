@@ -148,19 +148,21 @@ int check_word(string guess, int wordsize, int status[], string choice)
     // iterate over each letter of guess
     for (int i = 0 ; i < wordsize; i++)
     {
-        //if they are the same immediately reward green
-        if (guess[i] == choice[i])
-        {
-            status[i] == 2;
-        }
         // iterate each letter of choice
         for (int j = 0; i < wordsize; j++)
         {
-            
+            //if they are the same immediately reward green
+            if (guess[i] == choice[j] && i == j)
+            {
+                status[i] == 2;
+            }
+            if (guess[i] == choice[j])
+            {
+
+            }
         }
 
     }
-
     // HINTS
     // iterate over each letter of the guess
         // iterate over each letter of the choice
