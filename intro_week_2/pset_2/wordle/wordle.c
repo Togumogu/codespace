@@ -30,18 +30,16 @@ int main(int argc, string argv[])
     // failsafe for no or more than 1 inputs
     if (argc != 2)
     {
-        printf("Usage: ./caesar key\n");
+        printf("Error: wordsize must be either 5, 6, 7, or 8\n");
         return 1;
     }
     // failsafe for non and negative number
-    for (int i = 0; i < strlen(argv[1]); i++)
+    if (argv[1][0] != 1)
     {
-        if (!isdigit(argv[1][i]) || )
-        {
-            printf("Usage: ./caesar key\n");
-            return 1;
-        }
+        printf("Error: wordsize must be either 5, 6, 7, or 8\n");
+        return 1;
     }
+
     int wordsize = 0;
 
     // ensure argv[1] is either 5, 6, 7, or 8 and store that value in wordsize instead
