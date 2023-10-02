@@ -145,6 +145,11 @@ int check_word(string guess, int wordsize, int status[], string choice)
 
     // compare guess to choice and score points as appropriate, storing points in status
     // TODO #5
+    // iterate over each letter of guess
+    for (int i = 0 ; i < strlen(guess); i++)
+    {
+        
+    }
 
     // HINTS
     // iterate over each letter of the guess
