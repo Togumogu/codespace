@@ -45,10 +45,11 @@ char substitute(char letter, char code)
     //only move letters
     if (isalpha(letter))
     {
-
+        
 
     }
     return letter;
 }
 
-//to upper
+//find which row
+//then array[row]
