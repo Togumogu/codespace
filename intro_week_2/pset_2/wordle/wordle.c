@@ -46,6 +46,8 @@ int main(int argc, string argv[])
         printf("Error: wordsize must be either 5, 6, 7, or 8\n");
         return 1;
     }
+    // ensure argv[1] is either 5, 6, 7, or 8 and store that value in wordsize instead
+    // TODO #2
     // store input in wordsize & failsafe for non 5, 6, 7 and 8
     int wordsize = 0;
     wordsize = argv[1][0] - 48;
@@ -54,9 +56,6 @@ int main(int argc, string argv[])
         printf("Error: wordsize must be either 5, 6, 7, or 8\n");
         return 1;
     }
-    // ensure argv[1] is either 5, 6, 7, or 8 and store that value in wordsize instead
-    // TODO #2
-
     // open correct file, each file has exactly LISTSIZE words
     char wl_filename[6];
     sprintf(wl_filename, "%i.txt", wordsize);
