@@ -143,7 +143,6 @@ string get_guess(int wordsize)
 int check_word(string guess, int wordsize, int status[], string choice)
 {
     int score = 0;
-
     // compare guess to choice and score points as appropriate, storing points in status
     // TODO #5
     // iterate over each letter of guess
@@ -156,11 +155,13 @@ int check_word(string guess, int wordsize, int status[], string choice)
             if (guess[i] == choice[j] && i != j)
             {
                 status[i] = 1;
+                score += 1;
             }
             //if they find it reward green
             else if (guess[i] == choice[j] && i == j)
             {
                 status[i] = 2;
+                score += 2;
                 break;
             }
         }
