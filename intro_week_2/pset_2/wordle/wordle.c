@@ -99,7 +99,7 @@ int main(int argc, string argv[])
         // TODO #4
         for (int j= 0; j < wordsize; j++)
         {
-            status[wordsize] = 0;
+            status[j] = 0;
         }
         // Calculate score for the guess
         int score = check_word(guess, wordsize, status, choice);
@@ -146,10 +146,14 @@ int check_word(string guess, int wordsize, int status[], string choice)
     // compare guess to choice and score points as appropriate, storing points in status
     // TODO #5
     // iterate over each letter of guess
-    for (int i = 0 ; i < strlen(guess); i++)
+    for (int i = 0 ; i < wordize; i++)
     {
-        guess[i];
-        
+        //if they are the same immediately reward green
+        if (guess[i] == choice[i])
+        {
+            status
+        }
+
     }
 
     // HINTS
