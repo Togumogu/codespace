@@ -39,9 +39,9 @@ int main(int argc, string argv[])
         printf("Error: wordsize must be either 5, 6, 7, or 8\n");
         return 1;
     }
-    int word_count = argv[1][0];
-
+    // store input in wordsize & failsafe for non 5, 6, 7 and 8
     int wordsize = 0;
+    wordzie = argv[1][0] - 48;
 
     // ensure argv[1] is either 5, 6, 7, or 8 and store that value in wordsize instead
     // TODO #2
