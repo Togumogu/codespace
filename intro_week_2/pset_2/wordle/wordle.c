@@ -119,6 +119,7 @@ int main(int argc, string argv[])
 
     // Print the game's result
     // TODO #7
+    if ()
 
     // that's all folks!
     return 0;
@@ -176,13 +177,22 @@ void print_word(string guess, int wordsize, int status[])
     // iterate through status to get color codes
     for (int i = 0; i < wordsize; i++)
     {
+        //for close
         if (status[i] == 1)
+        {
+            printf(YELLOW"%c"RESET"", guess[i]);
+        }
+        //for exact
+        else if (status[i] == 2)
         {
             printf(GREEN"%c"RESET"", guess[i]);
         }
-        else if ()
+        //for wrong
+        else if (status[i] == 0)
+        {
+            printf(RED"%c"RESET"", guess[i]);
+        }
     }
-
     printf("\n");
     return;
 }
