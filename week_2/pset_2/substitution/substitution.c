@@ -33,14 +33,14 @@ int main(int argc, string argv[])
     // feed phrase into sub func
     for (int i = 0; strlen(phrase); i++)
     {
-        phrase[i] = substitute(phrase[i], cipher);
+        phrase[i] = substitute(phrase[i], cipher[i]);
     }
     //print cipher text
     printf("ciphertext: %s\n", phrase);
 
 }
 //substitute funtion
-char substitute(char letter, string code)
+char substitute(char letter, char code)
 {
     //only move letters
     if (isalpha(letter))
