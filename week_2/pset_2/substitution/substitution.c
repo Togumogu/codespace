@@ -45,7 +45,10 @@ char substitute(char letter, char code)
     //only move letters
     if (isalpha(letter))
     {
-        
+        if(isupper(letter))
+        {
+            
+        }
 
     }
     return letter;
