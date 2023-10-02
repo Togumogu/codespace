@@ -121,7 +121,7 @@ int main(int argc, string argv[])
     // TODO #7
     if (won)
     [
-        
+        printf("You won! The chose word was: %s)
     ]
 
     // that's all folks!
