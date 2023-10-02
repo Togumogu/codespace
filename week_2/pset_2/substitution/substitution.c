@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
+//need to fix different inputs same letter
 
 int main(int argc, string argv[])
 {
@@ -25,6 +26,7 @@ int main(int argc, string argv[])
     }
     // get ready to rotate
     string phrase = get_string("plaintext: ");
+    
 }
 //replace funtion
 //to upper
