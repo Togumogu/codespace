@@ -1,9 +1,9 @@
 #include <cs50.h>
-#include <stdlib.h>
+#include <ctype.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include <time.h>
-#include <ctype.h>
 
 // each of our text files contains 1000 words
 #define LISTSIZE 1000
@@ -14,10 +14,10 @@
 #define WRONG 0
 
 // ANSI color codes for boxed in letters
-#define GREEN   "\e[38;2;255;255;255;1m\e[48;2;106;170;100;1m"
-#define YELLOW  "\e[38;2;255;255;255;1m\e[48;2;201;180;88;1m"
-#define RED     "\e[38;2;255;255;255;1m\e[48;2;220;20;60;1m"
-#define RESET   "\e[0;39m"
+#define GREEN "\e[38;2;255;255;255;1m\e[48;2;106;170;100;1m"
+#define YELLOW "\e[38;2;255;255;255;1m\e[48;2;201;180;88;1m"
+#define RED "\e[38;2;255;255;255;1m\e[48;2;220;20;60;1m"
+#define RESET "\e[0;39m"
 
 // user-defined function prototypes
 string get_guess(int wordsize);
@@ -83,7 +83,7 @@ int main(int argc, string argv[])
     bool won = false;
 
     // print greeting, using ANSI color codes to demonstrate
-    printf(GREEN"This is WORDLE50"RESET"\n");
+    printf(GREEN "This is WORDLE50" RESET "\n");
     printf("You have %i tries to guess the %i-letter word I'm thinking of\n", guesses, wordsize);
 
     // main game loop, one iteration for each guess
@@ -97,7 +97,7 @@ int main(int argc, string argv[])
 
         // set all elements of status array initially to 0, aka WRONG
         // TODO #4
-        for (int j= 0; j < wordsize; j++)
+        for (int j = 0; j < wordsize; j++)
         {
             status[j] = 0;
         }
@@ -152,18 +152,18 @@ int check_word(string guess, int wordsize, int status[], string choice)
     // compare guess to choice and score points as appropriate, storing points in status
     // TODO #5
     // iterate over each letter of guess
-    for (int i = 0 ; i < wordsize; i++)
+    for (int i = 0; i < wordsize; i++)
     {
         // iterate each letter of choice
         for (int j = 0; j < wordsize; j++)
         {
-            //if they are somewhere reward yellow
+            // if they are somewhere reward yellow
             if (guess[i] == choice[j] && i != j)
             {
                 status[i] = 1;
                 score += 1;
             }
-            //if they find it reward green
+            // if they find it reward green
             else if (guess[i] == choice[j] && i == j)
             {
                 status[i] = 2;
@@ -171,7 +171,6 @@ int check_word(string guess, int wordsize, int status[], string choice)
                 break;
             }
         }
-
     }
     return score;
 }
@@ -183,20 +182,20 @@ void print_word(string guess, int wordsize, int status[])
     // iterate through status to get color codes
     for (int i = 0; i < wordsize; i++)
     {
-        //for close
+        // for close
         if (status[i] == 1)
         {
-            printf(YELLOW"%c"RESET"", guess[i]);
+            printf(YELLOW "%c" RESET "", guess[i]);
         }
-        //for exact
+        // for exact
         else if (status[i] == 2)
         {
-            printf(GREEN"%c"RESET"", guess[i]);
+            printf(GREEN "%c" RESET "", guess[i]);
         }
-        //for wrong
+        // for wrong
         else if (status[i] == 0)
         {
-            printf(RED"%c"RESET"", guess[i]);
+            printf(RED "%c" RESET "", guess[i]);
         }
     }
     printf("\n");
