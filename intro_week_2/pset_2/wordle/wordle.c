@@ -34,17 +34,14 @@ int main(int argc, string argv[])
         printf("Error: wordsize must be either 5, 6, 7, or 8\n");
         return 1;
     }
-    // failsafe for non and negative number
-    for (int i = 0; i < strlen(argv[1]); i++)
-    {
-        if (!isdigit(argv[1][i]))
-        {
-            printf("Error: wordsize must be either 5, 6, 7, or 8\n");
-            return 1;
-        }
-    }
     // failsafe for double digits
     if (argv[1][1])
+    {
+        printf("Error: wordsize must be either 5, 6, 7, or 8\n");
+        return 1;
+    }
+    // failsafe for non and negative number
+    if (!isdigit(argv[1][0]))
     {
         printf("Error: wordsize must be either 5, 6, 7, or 8\n");
         return 1;
