@@ -52,7 +52,7 @@ int main(int argc, string argv[])
     // store input in wordsize & failsafe for non 5, 6, 7 and 8
     int wordsize = 0;
     wordsize = argv[1][0] - 48;
-    if (wordsize < 5 && wordsize > 8)
+    if (wordsize < 5 || wordsize > 8)
     {
         printf("Error: wordsize must be either 5, 6, 7, or 8\n");
         return 1;
