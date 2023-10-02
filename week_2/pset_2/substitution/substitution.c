@@ -51,13 +51,13 @@ char substitute(char letter, string code)
         if(isupper(letter))
         {
             alp_row = alp_row - 64;
-            letter = code[alp_row];
+            letter = code[alp_row -1];
         }
         //if lowercase
         else if (islower(letter))
         {
             alp_row = alp_row - 96;
-            letter = tolower(code[alp_row]);
+            letter = tolower(code[alp_row -1]);
         }
     }
     return letter;
