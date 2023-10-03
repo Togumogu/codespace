@@ -66,6 +66,7 @@ void sort_cities(void)
     int bubble_counter = -1;
     for (int i = 0; i < NUM_CITIES; i++)
     {
-        avg_temp 
+        bubble_counter = 0;
+        
     }
 }
