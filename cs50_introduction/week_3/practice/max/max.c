@@ -27,6 +27,7 @@ int main(void)
 // TODO: return the max value
 int max(int array[], int n)
 {
+    int max_value;
     for (int i = 0; i < n; i++)
     {
         int value_row = i; //assume biggest is on the first element
@@ -37,7 +38,7 @@ int max(int array[], int n)
                 value_row = j;
             }
         }
-        int max_value = array[value_row];
-        return max_value;
+        max_value = array[value_row];
     }
+    return max_value;
 }
