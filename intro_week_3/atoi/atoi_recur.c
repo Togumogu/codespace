@@ -30,7 +30,7 @@ int convert(string input)
     int length = strlen(input) - 1;
     if (length < 0)
     {
-        return;
+        return 1;
     }
     int last_digit = input[length] - 48;
     input[length] = '\0';
