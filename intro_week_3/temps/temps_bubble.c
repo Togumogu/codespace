@@ -92,9 +92,17 @@ void sort_cities(void)
 {
     for (int i = 0; i < NUM_CITIES; i++)
     {
-        for(int j = i + 1; j < NUM_CITIES - 1 )
+        for(int j = 0; j < NUM_CITIES - 1 - i; j++) this way doesnt sort the left most which are already sorted
+        {
+            if (temps[j].temp < temps[j + 1].temp)
+            {
+                temporary[0] = temps[j];
+                temps[j] = temps[j + 1];
+                temps[j + 1] = temporary[0];
+            }
+        }
+
     }
 }
-
 
 */
