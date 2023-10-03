@@ -116,7 +116,6 @@ int main(int argc, string argv[])
             break;
         }
     }
-
     // Print the game's result
     // TODO #7
     if (won)
