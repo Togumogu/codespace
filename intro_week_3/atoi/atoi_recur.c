@@ -37,5 +37,22 @@ int convert(string input)
         input[length -1] = '\0';
         return (last_digit + 10 * convert(input));
     }
-
+    /*
+    // alternative better recursion
+    int length = strlen(input);
+    int tmp = 0;
+    if (length == 0)
+    {
+        return number;
+    }
+    for (int i = length - 1; i >= 0; i--)
+    {
+        tmp = input[i] - 48;
+        input[i] = '\0';
+        convert(input);
+        number = number * 10 + tmp
+        return number;
+    }
+    return number;
+    */
 }
