@@ -67,5 +67,9 @@ void sort_cities(void)
     {
 
     }
-    
+
+    for (int i = 0; i < NUM_CITIES; i++)
+    {
+        
+    }
 }
