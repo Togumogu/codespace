@@ -70,6 +70,6 @@ void sort_cities(void)
         tmp[0] = temps[i];
         int j = i - 1; //to compare with the value before
         // shift
-        
+        while (j >= 0 && )
     }
 }
