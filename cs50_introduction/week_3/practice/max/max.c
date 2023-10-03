@@ -29,8 +29,11 @@ int max(int array[], int n)
 {
     for (int i = 0; i < n; i++)
     {
-        int max_value;
+        int max_value = array[i];
         if (array[i + 1] > array[i])
+        {
+            max_value =
+        }
 
     }
 
