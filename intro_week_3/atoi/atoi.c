@@ -27,11 +27,11 @@ int convert(string input)
 {
     // TODO
     int converted = 0;
-    for (int i = strlen(input - 1); i >= 0; i--)
+    for (int i = strlen(input) - 1; i >= 0; i--)
     {
         int tmp = input[i];
         tmp = tmp - 48;
-        tmp = tmp * pow(10, strlen(input -1) - i);
+        tmp = tmp * pow(10, strlen(input) - 1 - i);
         converted += tmp;
     }
     return converted;
