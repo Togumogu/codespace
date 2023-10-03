@@ -87,7 +87,7 @@ void sort_cities(void)
     }
 }
 /*
-whithout counter
+two loops
 void sort_cities(void)
 {
     for (int i = 0; i < NUM_CITIES; i++)
@@ -103,6 +103,31 @@ void sort_cities(void)
         }
 
     }
+}
+
+*/
+/*
+two loops w/ counter
+void sort_cities(void)
+{
+    bool swapped = false;
+    do
+    {
+        swapped = false;
+        for (int i = 0; i < NUM_CITIES; i++)
+        {
+            for(int j = 0; j < NUM_CITIES - 1 - i; j++) this way doesnt sort the left most which are already sorted
+            {
+                if (temps[j].temp < temps[j + 1].temp)
+                {
+                    temporary[0] = temps[j];
+                    temps[j] = temps[j + 1];
+                    temps[j + 1] = temporary[0];
+                    swapped = true;
+                }
+            }
+        }
+    } while (swapped)
 }
 
 */
