@@ -32,9 +32,8 @@ int max(int array[], int n)
     {
         if (array[i] < array[i + 1])
         {
-            max_value =
+            max_value = array[i + 1]
         }
-
     }
 
 }
