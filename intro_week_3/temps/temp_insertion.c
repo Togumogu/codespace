@@ -73,10 +73,10 @@ void sort_cities(void)
         while (j >= 0 && temps[j].temp > temps[i].temp)
         {
             //move to left
-            temps[i] = temps[j];
+            temps[j + 1] = temps[j];
             j -= 1; //this is whats doing the shifthing
 
         }
-        temps[i] = temporary[0];
+        temps[j + 1] = temporary[0];
     }
 }
