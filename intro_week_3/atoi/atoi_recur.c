@@ -27,7 +27,7 @@ int convert(string input)
     // TODO
     // with recursion
     int length = strlen(input);
-    if (length == 0)
+    if (length == 1)
     {
         return (input[0] - 48);
     }
