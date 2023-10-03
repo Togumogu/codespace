@@ -67,10 +67,11 @@ void sort_cities(void)
     // bc one unsorted element always is sorted by default
     for (int i = 0; i < NUM_CITIES - 1;/*thats why there is a minus one*/ i++)
     {
+        int smallest_number = i;
         // we iterate again to compare all the values
         for (int j = i + 1; j < NUM_CITIES; j++)
         {
-            int smallest_number = i;
+
             if (temps[i].temp > temps[j].temp)
             {
                 smallest_number = j;
@@ -81,8 +82,8 @@ void sort_cities(void)
         {
             avg_temp temporary[1];
             temporary[0] = temps[i];
-            temps[i] = temps[j];
-            temps[j] = temporary[0];
+            temps[i] = temps[smallest_number];
+            temps[smallest_number] = temporary[0];
         }
     }
 }
