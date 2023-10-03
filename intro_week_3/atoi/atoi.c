@@ -26,4 +26,9 @@ int main(void)
 int convert(string input)
 {
     // TODO
+    // get the last index
+    for (i = strlen(input - 1); i >= 0; i--)
+    {
+        
+    }
 }
