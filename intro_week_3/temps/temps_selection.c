@@ -67,6 +67,10 @@ void sort_cities(void)
     // bc one unsorted element always is sorted by default
     for (int i = 0; i < NUM_CITIES - 1;/*thats why there is a minus one*/ i++)
     {
-        
+        // we iterate again to compare all the values
+        for (int j = i + 1; j < NUM_CITIES; j++)
+        {
+            
+        }
     }
 }
