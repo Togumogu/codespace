@@ -62,13 +62,10 @@ int main(void)
 // TODO: Sort cities by temperature in descending order
 void sort_cities(void)
 {
-    // Add your code here
-    do
-    {
-
-    }
-
-    for (int i = 0; i < NUM_CITIES; i++)
+    // with selection we need sorted and unsorted portions of the array
+    // lets leave the last element of the array unsorted
+    // bc one unsorted element always is sorted by default
+    for (int i = 0; i < NUM_CITIES - 1;/*thats why there is a minus one*/ i++)
     {
         
     }
