@@ -86,3 +86,15 @@ void sort_cities(void)
         }
     }
 }
+/*
+whithout counter
+void sort_cities(void)
+{
+    for (int i = 0; i < NUM_CITIES; i++)
+    {
+        for(int j = i + 1; j < NUM_CITIES - 1 )
+    }
+}
+
+
+*/
