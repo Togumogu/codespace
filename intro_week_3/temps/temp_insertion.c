@@ -69,7 +69,11 @@ void sort_cities(void)
         avg_temp tmp[1];
         tmp[0] = temps[i];
         int j = i - 1; //to compare with the value before
-        // shift
-        while (j >= 0 && )
+        // shift until you are at the lefmost element and the left is bigger than you
+        while (j >= 0 && temps[j] > temps[i])
+        {
+            //move to left
+            
+        }
     }
 }
