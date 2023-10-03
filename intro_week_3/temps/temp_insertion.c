@@ -70,7 +70,7 @@ void sort_cities(void)
         temporary[0] = temps[i];
         int j = i - 1; //to compare with the value before
         // shift until you are at the lefmost element and the left is bigger than you
-        while (j >= 0 && temps[j].temp > temps[i].temp)
+        while (j >= 0 && temps[j].temp > temporary[0].temp)
         {
             //move to left
             temps[j + 1] = temps[j];
