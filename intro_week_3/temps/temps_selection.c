@@ -76,5 +76,13 @@ void sort_cities(void)
                 smallest_number = j;
             }
         }
+        // perform the swap
+        if (smallest_number != i)
+        {
+            avg_temp temporary[1];
+            temporary[0] = temps[i];
+            temps[i] = temps[j];
+            temps[j] = temporary[0];
+        }
     }
 }
