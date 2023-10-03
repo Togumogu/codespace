@@ -64,9 +64,17 @@ void sort_cities(void)
 {
     // Add your code here
     int bubble_counter = -1;
-    for (int i = 0; i < NUM_CITIES; i++)
+    while (bubble_counter != 0)
     {
         bubble_counter = 0;
-        
+        for (int i = 0; i < NUM_CITIES; i++)
+        {
+            avg_temp temporary[1];
+            if (temps[i].temp < temps[i + 1].temp)
+            {
+                temporary.
+            }
+
+        }
     }
 }
