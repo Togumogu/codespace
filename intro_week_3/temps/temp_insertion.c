@@ -75,7 +75,8 @@ void sort_cities(void)
             //move to left
             temps[i] = temps[j];
             j -= 1; //this is whats doing the shifthing
-            
+
         }
+        temps[i] = temporary[0];
     }
 }
