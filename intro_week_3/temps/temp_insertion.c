@@ -62,9 +62,14 @@ int main(void)
 // TODO: Sort cities by temperature in descending order
 void sort_cities(void)
 {
-    // iterate
-    for (int i = 0; i < NUM_CITIES; i++)
+    // iterate but start from 1 bc we stored the second elemnent of the array in a variable so we need to get the first
+    //to start comparing
+    for (int i = 1; i < NUM_CITIES; i++)
     {
+        avg_temp tmp[1];
+        tmp[0] = temps[i];
+        int j = i - 1; //to compare with the value before
+        // shift
         
     }
 }
