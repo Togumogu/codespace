@@ -58,31 +58,10 @@ int main(void)
         printf("%s: %i\n", temps[i].city, temps[i].temp);
     }
 }
-// BUBBLE SORT
+// SELECTION SORT
 // TODO: Sort cities by temperature in descending order
 void sort_cities(void)
 {
     // Add your code here
-    int bubble_counter = -1;
-    // every time the counter isnt zero
-    while (bubble_counter != 0)
-    {
-        // reset the counter to zero
-        bubble_counter = 0;
-        // to iterate through the array
-        for (int i = 0; i < NUM_CITIES; i++)
-        {
-            // create temp value with the same data type to temporarily store values
-            avg_temp temporary[1];
-            //if the temp to the right is bigger swap
-            if (temps[i].temp < temps[i + 1].temp)
-            {
-                temporary[0] = temps[i];
-                temps[i] = temps[i + 1];
-                temps[i + 1] = temporary[0];
-                // add one to counter so if no swaps happen counter is at 0 and search is done
-                bubble_counter++;
-            }
-        }
-    }
+    
 }
