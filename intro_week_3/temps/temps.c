@@ -63,4 +63,9 @@ int main(void)
 void sort_cities(void)
 {
     // Add your code here
+    int bubble_counter = -1;
+    for (int i = 0; i < NUM_CITIES; i++)
+    {
+        avg_temp 
+    }
 }
