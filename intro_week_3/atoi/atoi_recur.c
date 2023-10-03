@@ -28,6 +28,10 @@ int convert(string input)
     // TODO
     // with recursion
     int length = strlen(input) - 1;
+    if (length < 0)
+    {
+        return;
+    }
     int last_digit = input[length] - 48;
     input[length] = '\0';
     return (10 * convert(input) + last_digit);
