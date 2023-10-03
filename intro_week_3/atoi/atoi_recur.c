@@ -18,7 +18,6 @@ int main(void)
             return 1;
         }
     }
-    convert(input);
     // Convert string to int
     printf("%i\n", convert(input));
 }
