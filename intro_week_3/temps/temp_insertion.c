@@ -66,14 +66,15 @@ void sort_cities(void)
     //to start comparing
     for (int i = 1; i < NUM_CITIES; i++)
     {
-        avg_temp tmp[1];
-        tmp[0] = temps[i];
+        avg_temp temporary[1];
+        temporary[0] = temps[i];
         int j = i - 1; //to compare with the value before
         // shift until you are at the lefmost element and the left is bigger than you
-        while (j >= 0 && temps[j] > temps[i])
+        while (j >= 0 && temps[j].temp > temps[i].temp)
         {
             //move to left
-            
+            temps[j] = temps[i];
+            temps[i] = temporary[0];
         }
     }
 }
