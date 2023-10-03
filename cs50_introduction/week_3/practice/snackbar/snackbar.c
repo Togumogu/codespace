@@ -74,6 +74,9 @@ int main(void)
 // Add at least the first four items to the menu array
 void add_items(void)
 {
+    // hard code items and prices
+    menu_item[0].item
+    // get choices
     menu_item choices[4];
     for (int i = 0; i < 4; i++)
     {
