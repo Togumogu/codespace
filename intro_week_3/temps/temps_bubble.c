@@ -58,7 +58,7 @@ int main(void)
         printf("%s: %i\n", temps[i].city, temps[i].temp);
     }
 }
-// BUBBLE SORT
+// BUBBLE SORT - swap with eachother then stop if no swap is happenning
 // TODO: Sort cities by temperature in descending order
 void sort_cities(void)
 {

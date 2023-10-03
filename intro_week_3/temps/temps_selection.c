@@ -58,7 +58,7 @@ int main(void)
         printf("%s: %i\n", temps[i].city, temps[i].temp);
     }
 }
-// SELECTION SORT
+// SELECTION SORT - find the smallest number and place it in the first index
 // TODO: Sort cities by temperature in descending order
 void sort_cities(void)
 {

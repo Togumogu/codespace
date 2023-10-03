@@ -58,9 +58,9 @@ int main(void)
         printf("%s: %i\n", temps[i].city, temps[i].temp);
     }
 }
-// INSERTION SORT
+// INSERTION SORT - from left to right compare each number and sort them according starting from 2 to length of array e.g sort first two sort first three...
 // TODO: Sort cities by temperature in descending order
 void sort_cities(void)
 {
-    
+
 }
