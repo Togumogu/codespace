@@ -33,5 +33,6 @@ int convert(string input)
     {
         int tmp = input[i];
         tmp = tmp - 48;
+        tmp = tmp * 10
     }
 }
