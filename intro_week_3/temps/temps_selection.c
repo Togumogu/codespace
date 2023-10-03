@@ -72,7 +72,7 @@ void sort_cities(void)
         for (int j = i + 1; j < NUM_CITIES; j++)
         {
 
-            if (temps[i].temp > temps[j].temp)
+            if (temps[i].temp < temps[j].temp)
             {
                 smallest_number = j;
             }
