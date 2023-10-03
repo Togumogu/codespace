@@ -74,10 +74,10 @@ int main(void)
 // Add at least the first four items to the menu array
 void add_items(void)
 {
-    menu
+    menu_item choices[4];
     for (int i = 0; i < 4; i++)
     {
-
+        choices[i].
     }
     return;
 }
