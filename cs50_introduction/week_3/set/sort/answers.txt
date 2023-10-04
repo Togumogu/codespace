@@ -1,11 +1,14 @@
 sort1 uses: TODO
-
+bubble sort
 How do you know?: TODO
+reverse_sort is the worst case and sort is the best case
 
 sort2 uses: TODO
-
+merge sort
 How do you know?: TODO
+reverse_sort is the worst case and sort is the best case
 
 sort3 uses: TODO
-
+selection sort
 How do you know?: TODO
+reverse_sort is the worst case and sort is the best case
