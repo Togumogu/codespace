@@ -75,7 +75,8 @@ int main(void)
 void add_items(void)
 {
     // hard code items and prices
-    menu_item[0].item
+    menu_item[0].item = 
+    menu_item[0].price =
     // get choices
     menu_item choices[4];
     for (int i = 0; i < 4; i++)
