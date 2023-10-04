@@ -84,9 +84,18 @@ bool vote(string name)
 void print_winner(void)
 {
     // TODO
+    int smallest_num;
     for (int i = 0; i < candidate_count; i++)
     {
-        
+        smallest_num = i;
+        for (int j = i + 1; j < candidate_count; j++)
+        {
+            if (candidates[i].votes > candidates[j].votes)
+            {
+                smallest_num = j;
+            }
+        }
     }
+    printf("Winner is %s!\n", candidates[smallest_num].name);
     return;
 }
