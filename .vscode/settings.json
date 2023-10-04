@@ -2,5 +2,8 @@
     "gitdoc.enabled": true,
     "githubPullRequests.ignoredPullRequestBranches": [
         "develop"
-    ]
+    ],
+    "files.associations": {
+        "string.h": "c"
+    }
 }
