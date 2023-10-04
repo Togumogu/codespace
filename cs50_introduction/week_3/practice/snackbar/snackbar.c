@@ -109,7 +109,9 @@ void add_items(void)
     for (int i = 1; i <= 4; i++)
     {
         choices[i].item = get_string("Choice Number %i: \.", i);
+        
     }
+
     return;
 }
 
