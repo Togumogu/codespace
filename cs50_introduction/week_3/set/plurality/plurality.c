@@ -74,7 +74,7 @@ bool vote(string name)
         if (strcasecmp(name, candidates[i].name) == 0)
         {
             candidates[i].votes++;
-            return false;
+            break;
         }
         else
         {
