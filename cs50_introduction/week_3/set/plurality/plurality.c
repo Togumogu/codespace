@@ -69,16 +69,12 @@ bool vote(string name)
 {
     // TODO
     // search through array if name matches
-    for (int i = 0; i < MAX; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
         if (strcasecmp(name, candidates[i].name))
         {
             candidates[i].votes++;
             return true;
-        }
-        else
-        {
-            return false;
         }
     }
     return false;
@@ -88,5 +84,9 @@ bool vote(string name)
 void print_winner(void)
 {
     // TODO
+    for (int i = 0; i < candidate_count; i++)
+    {
+        
+    }
     return;
 }
