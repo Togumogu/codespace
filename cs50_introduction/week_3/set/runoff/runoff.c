@@ -131,9 +131,14 @@ bool vote(int voter, int rank, string name)
     // iterate through array to find a match
     for (int i = 0; i < candidate_count; i++)
     {
+        // if name matches
         if (strcasecmp(name, candidates[i].name == 0))
         {
-            candidates[i].name
+            // increase vote by 1
+            candidates[i].votes++;
+            // update voter preferences
+            preferences[voter][i] = rank;
+            return true;
         }
     }
     return false;
