@@ -93,17 +93,17 @@ void add_items(void)
     menu[5].item = "cheese fries";
     menu[5].price = 6;
 
-    menu[0].item = "cold pressed juice";
-    menu[0].price = 7;
+    menu[6].item = "cold pressed juice";
+    menu[6].price = 7;
 
-    menu[0].item = "cold brew";
-    menu[0].price = 3;
+    menu[7].item = "cold brew";
+    menu[7].price = 3;
 
-    menu[0].item = "water";
-    menu[0].price = 2;
+    menu[8].item = "water";
+    menu[8].price = 2;
 
-    menu[0].item = "soda";
-    menu[0].price = 2;
+    menu[9].item = "soda";
+    menu[9].price = 2;
     // get choices
     menu_item choices[4];
     for (int i = 1; i <= 4; i++)
