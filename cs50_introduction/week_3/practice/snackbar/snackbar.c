@@ -75,8 +75,29 @@ int main(void)
 void add_items(void)
 {
     // hard code items and prices
-    menu_item[0].item = 
-    menu_item[0].price =
+    menu_item[0].item = "burger";
+    menu_item[0].price = 9.5;
+
+    menu_item[0].item = "vegan burger";
+    menu_item[0].price = 11;
+
+        menu_item[0].item = "hot dog";
+    menu_item[0].price = 5;
+
+        menu_item[0].item = "cheese dog";
+    menu_item[0].price = 7;
+
+        menu_item[0].item = "fries";
+    menu_item[0].price = 5;
+
+        menu_item[0].item = "cheese fries";
+    menu_item[0].price = 6;
+
+        menu_item[0].item = "cold pressed juice";
+    menu_item[0].price = 7;
+
+        menu_item[0].item = "cold brew";
+    menu_item[0].price = 3;
     // get choices
     menu_item choices[4];
     for (int i = 0; i < 4; i++)
