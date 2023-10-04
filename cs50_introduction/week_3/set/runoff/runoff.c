@@ -189,6 +189,11 @@ bool print_winner(void)
 int find_min(void)
 {
     // TODO
+    // iterate through candidate
+    for (int i = 0; i < candidate_count; i++)
+    {
+        
+    }
     return 0;
 }
 
