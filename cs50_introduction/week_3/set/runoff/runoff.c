@@ -149,11 +149,12 @@ void tabulate(void)
     // iterate every voter
     for (int i = 0; i < voter_count; i++)
     {
+        int first_rank = 0
         // iterate every candidate preferences for a single voter
         for (int j = 0; j < candidate_count; j++)
         {
-            // dont do it if eliminated
-            if (candidates[j].eliminated)
+            // find smallest rank to find voter preference
+            if (preferences[i][j])
             {
                 candidates[j].votes++
             }
