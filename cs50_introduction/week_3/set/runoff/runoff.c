@@ -211,14 +211,29 @@ bool is_tie(int min)
     // iterate through candidates
     for (int i = 0; i < candidate_count; i++)
     {
-        if (min == )
+        if (min == candidates[i].votes)
+        {
+            tie_num++;
+        }
     }
-    return false;
+    // if all are tied
+    if (tie_num == candidate_count)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
 
 // Eliminate the candidate (or candidates) in last place
 void eliminate(int min)
 {
     // TODO
+    for (int i = 0; i < candidate_count; i++)
+    {
+        
+    }
     return;
 }
