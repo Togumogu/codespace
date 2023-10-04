@@ -149,10 +149,15 @@ void tabulate(void)
     // iterate every voter
     for (int i = 0; i < voter_count; i++)
     {
+        // iterate every candidate preferences for a single voter
         for (int j = 0; j < candidate_count; j++)
         {
             // dont do it if eliminated
-            if (candidates[j])
+            if (!candidates[j].eliminated)
+            {
+                candidates[j].votes++
+            }
+            break;
         }
     }
     return;
