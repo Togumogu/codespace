@@ -172,6 +172,8 @@ void tabulate(void)
 bool print_winner(void)
 {
     // TODO
+    // iterate through candidates
+    for (int i = 0; i < candidate_count)
     return false;
 }
 
