@@ -75,35 +75,35 @@ int main(void)
 void add_items(void)
 {
     // hard code items and prices
-    menu_item[0].item = "burger";
-    menu_item[0].price = 9.5;
+    menu[0].item = "burger";
+    menu[0].price = 9.5;
 
-    menu_item[0].item = "vegan burger";
-    menu_item[0].price = 11;
+    menu[1].item = "vegan burger";
+    menu[1].price = 11;
 
-    menu_item[0].item = "hot dog";
-    menu_item[0].price = 5;
+    menu[2].item = "hot dog";
+    menu[2].price = 5;
 
-    menu_item[0].item = "cheese dog";
-    menu_item[0].price = 7;
+    menu[3].item = "cheese dog";
+    menu[3].price = 7;
 
-    menu_item[0].item = "fries";
-    menu_item[0].price = 5;
+    menu[4].item = "fries";
+    menu[4].price = 5;
 
-    menu_item[0].item = "cheese fries";
-    menu_item[0].price = 6;
+    menu[5].item = "cheese fries";
+    menu[5].price = 6;
 
-    menu_item[0].item = "cold pressed juice";
-    menu_item[0].price = 7;
+    menu[0].item = "cold pressed juice";
+    menu[0].price = 7;
 
-    menu_item[0].item = "cold brew";
-    menu_item[0].price = 3;
+    menu[0].item = "cold brew";
+    menu[0].price = 3;
 
-    menu_item[0].item = "water";
-    menu_item[0].price = 2;
+    menu[0].item = "water";
+    menu[0].price = 2;
 
-    menu_item[0].item = "soda";
-    menu_item[0].price = 2;
+    menu[0].item = "soda";
+    menu[0].price = 2;
     // get choices
     menu_item choices[4];
     for (int i = 1; i <= 4; i++)
