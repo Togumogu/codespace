@@ -147,7 +147,10 @@ void tabulate(void)
 {
     // TODO
     // iterate every voter
-    for (int i = 0; i <)
+    for (int i = 0; i < voter_count; i++)
+    {
+        for ()
+    }
     return;
 }
 
