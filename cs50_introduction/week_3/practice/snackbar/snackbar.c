@@ -111,7 +111,10 @@ void add_items(void)
         choices[i].item = get_string("Choice Number %i: \.", i + 1);
         for (int j = 0; j < NUM_ITEMS; j++)
         {
-            int are_same = strcasecmp()
+            if (strcasecmp(choices[i].item, menu[j].item) == 0)
+            {
+                choice[i] = menu[j];
+            }
         }
     }
 
