@@ -85,6 +85,7 @@ void print_winner(void)
 {
     // TODO
     int most_votes;
+    printf("Scores %s: %i and %s: %i!\n", candidates[0].name, candidates[0].votes ,candidates[1].name, candidates[1].votes);
     for (int i = 0; i < candidate_count; i++)
     {
         most_votes = i;
