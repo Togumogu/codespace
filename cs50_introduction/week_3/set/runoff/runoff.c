@@ -128,6 +128,14 @@ int main(int argc, string argv[])
 bool vote(int voter, int rank, string name)
 {
     // TODO
+    // iterate through array to find a match
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (strcasecmp(name, candidates[i].name == 0))
+        {
+            candidates[i].name
+        }
+    }
     return false;
 }
 
