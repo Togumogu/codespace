@@ -151,7 +151,8 @@ void tabulate(void)
     {
         for (int j = 0; j < candidate_count; j++)
         {
-            
+            // dont do it if eliminated
+            if (candidates[j])
         }
     }
     return;
