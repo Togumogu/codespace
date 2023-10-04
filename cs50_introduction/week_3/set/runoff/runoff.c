@@ -206,6 +206,8 @@ int find_min(void)
 bool is_tie(int min)
 {
     // TODO
+    // create int for counter for tie candidates
+    int tie_num = 0;
     // iterate through candidates
     for (int i = 0; i < candidate_count; i++)
     {
