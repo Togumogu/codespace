@@ -81,28 +81,34 @@ void add_items(void)
     menu_item[0].item = "vegan burger";
     menu_item[0].price = 11;
 
-        menu_item[0].item = "hot dog";
+    menu_item[0].item = "hot dog";
     menu_item[0].price = 5;
 
-        menu_item[0].item = "cheese dog";
+    menu_item[0].item = "cheese dog";
     menu_item[0].price = 7;
 
-        menu_item[0].item = "fries";
+    menu_item[0].item = "fries";
     menu_item[0].price = 5;
 
-        menu_item[0].item = "cheese fries";
+    menu_item[0].item = "cheese fries";
     menu_item[0].price = 6;
 
-        menu_item[0].item = "cold pressed juice";
+    menu_item[0].item = "cold pressed juice";
     menu_item[0].price = 7;
 
-        menu_item[0].item = "cold brew";
+    menu_item[0].item = "cold brew";
     menu_item[0].price = 3;
+
+    menu_item[0].item = "water";
+    menu_item[0].price = 2;
+
+    menu_item[0].item = "soda";
+    menu_item[0].price = 2;
     // get choices
     menu_item choices[4];
-    for (int i = 0; i < 4; i++)
+    for (int i = 1; i <= 4; i++)
     {
-        choices[i].
+        choices[i].item = get_string("Choice Number %i: \.", i);
     }
     return;
 }
