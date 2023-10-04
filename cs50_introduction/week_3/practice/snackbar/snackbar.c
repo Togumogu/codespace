@@ -106,10 +106,10 @@ void add_items(void)
     menu[9].price = 2;
     // get choices
     menu_item choices[4];
-    for (int i = 1; i <= 4; i++)
+    for (int i = 0; i < 4; i++)
     {
         choices[i].item = get_string("Choice Number %i: \.", i);
-        
+        for (int j = 0)
     }
 
     return;
