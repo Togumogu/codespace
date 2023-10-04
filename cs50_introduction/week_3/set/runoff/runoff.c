@@ -159,6 +159,7 @@ void tabulate(void)
                 first_rank = j;
             }
         }
+        candidates[first_rank].votes++;
     }
     return;
 }
