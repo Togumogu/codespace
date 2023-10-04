@@ -74,14 +74,14 @@ bool vote(string name)
         if (strcasecmp(name, candidates[i].name))
         {
             candidates[i].votes++;
-            return true;
+            return false;
         }
         else
         {
-            return false;
+            return true;
         }
     }
-    return false;
+    return true;
 }
 
 // Print the winner (or winners) of the election
