@@ -134,8 +134,6 @@ bool vote(int voter, int rank, string name)
         // if name matches
         if (strcasecmp(name, candidates[i].name == 0))
         {
-            // increase vote by 1
-            candidates[i].votes++;
             // update voter preferences
             preferences[voter][i] = rank;
             return true;
