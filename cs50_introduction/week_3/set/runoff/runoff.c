@@ -149,7 +149,7 @@ void tabulate(void)
     // iterate every voter
     for (int i = 0; i < voter_count; i++)
     {
-        int first_rank = MAX_CANDIDATES + 1;
+        int first_rank = i;
         // iterate every candidate preferences for a single voter
         for (int j = 0; j < candidate_count; j++)
         {
