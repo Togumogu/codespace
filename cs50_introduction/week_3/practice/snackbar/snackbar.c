@@ -71,7 +71,6 @@ int main(void)
     printf("Your total cost is: $%.2f\n", total);
 }
 
-// Add at least the first four items to the menu array
 void add_items(void)
 {
     // hard code items and prices
@@ -104,19 +103,6 @@ void add_items(void)
 
     menu[9].item = "soda";
     menu[9].price = 2;
-    // get choices
-    menu_item choices[4];
-    for (int i = 0; i < 4; i++)
-    {
-        choices[i].item = get_string("Choice Number %i: \.", i + 1);
-        for (int j = 0; j < NUM_ITEMS; j++)
-        {
-            if (strcasecmp(choices[i].item, menu[j].item) == 0)
-            {
-                choice[i] = menu[j];
-            }
-        }
-    }
 
     return;
 }
@@ -124,5 +110,6 @@ void add_items(void)
 // Search through the menu array to find an item's cost
 float get_cost(string item)
 {
+    
     return 0.0;
 }
