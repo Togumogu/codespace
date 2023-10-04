@@ -108,8 +108,11 @@ void add_items(void)
     menu_item choices[4];
     for (int i = 0; i < 4; i++)
     {
-        choices[i].item = get_string("Choice Number %i: \.", i);
-        for (int j = 0)
+        choices[i].item = get_string("Choice Number %i: \.", i + 1);
+        for (int j = 0; j < NUM_ITEMS; j++)
+        {
+            int are_same = strcasecmp()
+        }
     }
 
     return;
