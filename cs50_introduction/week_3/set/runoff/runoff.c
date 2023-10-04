@@ -149,13 +149,15 @@ void tabulate(void)
     // iterate every voter
     for (int i = 0; i < voter_count; i++)
     {
-        int first_rank = 10;
+        int first_rank_pos = 0;
+        int first_rank_value = 10
         // iterate every candidate preferences for a single voter
         for (int j = 0; j < candidate_count; j++)
         {
             // find smallest rank to find voter preference
-            if (preferences[i][j] < first_rank)
+            if (preferences[i][j] < first_rank_value)
             {
+                first_rank_value = preferences[i][j];
                 first_rank = j;
             }
         }
