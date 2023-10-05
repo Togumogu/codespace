@@ -176,6 +176,7 @@ void sort_pairs(void)
     {
         for (int j = i + 1; j < pair_count; j++)
         {
+            // basically if the difference between the first pairs strength is smaller than the next pairs' swap, pairs[].winner is the location of the winner candidate
             if ((preferences[pairs[i].winner][pairs[i].loser] - preferences[pairs[i].loser][pairs[i].winner]) < (preferences[pairs[j].winner][pairs[j].loser] - preferences[pairs[j].loser][pairs[j].winner]))
             {
                 pair tmp = pairs[i];
