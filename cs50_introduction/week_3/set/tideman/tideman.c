@@ -244,9 +244,9 @@ void print_winner(void)
             }
         }
     }
-    int highest_votes = 0;
     for (int i = 0; i < candidate_count; i++)
     {
+        int highest_votes_pos = 0;
         if (highest_votes < votes[i])
         {
             highest_votes = votes[i];
