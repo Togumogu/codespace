@@ -207,7 +207,10 @@ bool is_cycle(int winner, int loser)
     // cycle through candidates
     for (int i = 0; i < candidate_count; i++)
     {
-        if(locked[loser][i])
+        if (locked[loser][i] && is_cycle(winner, i))
+        {
+            return true;
+        }
     }
     return false;
 }
