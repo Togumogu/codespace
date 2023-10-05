@@ -200,7 +200,7 @@ void lock_pairs(void)
 // Check if cycle
 bool is_cycle(int winner, int loser)
 {
-    if (winner == loser)
+    if (locked[loser][winner])
     {
         return true;
     }
