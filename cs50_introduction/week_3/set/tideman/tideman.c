@@ -140,11 +140,14 @@ void add_pairs(void)
         {
             if (i != j)
             {
-                pairs
+
             }
         }
     }
     return;
+
+    if ()
+    pairs[0].winner
 }
 
 // Sort pairs in decreasing order by strength of victory
