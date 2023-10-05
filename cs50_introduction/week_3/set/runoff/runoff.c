@@ -154,10 +154,12 @@ void tabulate(void)
         {
             if(!candidates[preferences[i][j]].eliminated)
             {
-                candidates[]
+                candidates[preferences[i][j]].votes++;
+                break;
             }
         }
     }
+    return;
     /*
     for (int i = 0; i < voter_count; i++)
     {
@@ -178,7 +180,6 @@ void tabulate(void)
         candidates[first_rank_pos].votes++;
     }
     */
-    return;
 }
 
 // Print the winner of the election, if there is one
