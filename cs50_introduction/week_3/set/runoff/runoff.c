@@ -150,6 +150,11 @@ void tabulate(void)
     // iterate every voter
     for (int i = 0; i < voter_count; i++)
     {
+        
+    }
+    /*
+    for (int i = 0; i < voter_count; i++)
+    {
         int first_rank_pos = 0;
         int first_rank_value = 10;
         // iterate every candidate preferences for a single voter
@@ -166,6 +171,7 @@ void tabulate(void)
         }
         candidates[first_rank_pos].votes++;
     }
+    */
     return;
 }
 
