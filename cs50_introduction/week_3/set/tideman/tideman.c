@@ -262,9 +262,8 @@ void print_winner(void)
     {
         if (votes[i] == highest_votes)
         {
-            printf("%s ", candidates[i]);
+            printf("%s\n", candidates[i]);
         }
     }
-    printf("\n");
     return;
 }
