@@ -208,12 +208,12 @@ bool is_cycle(int winner, int loser)
     // cycle through candidates, we loop to find the elements between the source and the element that would have created a cycle
     for (int i = 0; i < candidate_count; i++)
     {
-        //e.g. imagine there are 3 candidates, A --> B --> C and we receive a pair of C --> A now this would obviously create a cycle
-        //so to check if there is a cycle we go to the source we go back
-        //we know that source would be the loser or in this case A bc our winner is C and loser is A so to create a cycle we must be starting from B
+        //e.g. imagine there are 3 candidates, A --> B --> C and we receive a pair of C --> A now this would obviously create a cycle so we need to look if A --> ... --> C exists
+        //so to check if there is a cycle we go to the source, we go back to A and try to figure out how/if it goes to C
+        //we know that source would be the loser or in this case A bc our winner is C and loser is A so to create a cycle we must be starting from A
         // so we check if there is a locked that is taking our loser (A) as the winner argument that goes to any other candidate
-        // so we are checking if A --> B exists or A--> D exists whatever that may be
-        // we recurse and check again we load up our winner (C) and the i some unknown element in between A and C
+        // so we are checking if A --> i (e.g. A --> B exists or A--> D exists whatever that may be)
+        // we recurse and check again we load up our winner (C) and the i (some unknown element in between A and C)
         // so when we recurse and run the funtion again now we are checking for B --> E or F or whatever
         // what we are doing is seeing if the bridge between A and C connects no matter how long or which elements are between
         // the loop checks for all elements so in the end we will build a bridge from e.g A --> B --> D --> E --> C to see there will be cycle
