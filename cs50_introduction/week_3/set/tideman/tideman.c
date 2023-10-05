@@ -230,10 +230,14 @@ void print_winner(void)
 {
     for (int i = 0; i < candidate_count; i++)
     {
-        bool is_winner = false;
+        bool tmp = true;
         for (int j = 0; j < candidate_count; j++)
         {
-            if()
+            if(locked[i][j])
+            {
+                tmp = false;
+                break;
+            }
         }
     }
     /* THIS WORKS TOO BUT CHECK50 ISN'T GIVING ALL GREEN
