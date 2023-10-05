@@ -201,7 +201,7 @@ void lock_pairs(void)
 bool is_cycle(int winner, int loser)
 {
     // first check is the easiest if a reverse locked exists if definetely creates a cycle so return true
-    if (locked[loser][winner])
+    if (winner == loser)
     {
         return true;
     }
@@ -213,7 +213,11 @@ bool is_cycle(int winner, int loser)
         //we know that source would be the loser or in this case A bc our winner is C and loser is A so to create a cycle we must be starting from B
         // so we check if there is a locked that is taking our loser (A) as the winner argument that goes to any other candidate
         // so we are checking if A --> B exists or A--> D exists whatever that may be
-        // we recurse and check again remember
+        // we recurse and check again we load up our winner (C) and the i some unknown element in between A and C
+        // so when we recurse and run the funtion again now we are checking for B --> E or F or whatever
+        // what we are doing is seeing if the bridge between A and C connects no matter how long or which elements are between
+        // the loop checks for all elements so in the end we will build a bridge from e.g A --> B --> D --> E --> C to see there will be cycle
+        // now we've reached C both our winner and i is C so loop return all true's in all levels indicating a cycle
         if (locked[loser][i] && is_cycle(winner, i))
         {
             return true;
