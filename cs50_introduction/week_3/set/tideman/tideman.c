@@ -118,11 +118,14 @@ void record_preferences(int ranks[])
 {
     // TODO
     // iterate through every rank
-    int 
+    int prefer = 0;
     for (int i = 0; i < candidate_count; i++)
     {
-
-        ranks[i]
+        // iterate through every candidate below the rank
+        for (int j = ranks[i] + 1; j < candidate_count; j++)
+        {
+            preferences[ranks[i]]
+        }
     }
 
     for (int i = 0; i < candidate_count; i++)
