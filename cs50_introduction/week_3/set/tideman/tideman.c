@@ -140,7 +140,7 @@ void add_pairs(void)
         {
             if (i != j)
             {
-                
+                pairs
             }
         }
     }
