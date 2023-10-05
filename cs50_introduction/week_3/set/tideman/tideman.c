@@ -229,5 +229,15 @@ bool is_cycle(int winner, int loser)
 void print_winner(void)
 {
     // TODO
+    for (int i = 0; i < candidate_count - 1; i++)
+    {
+        for (int j = i + 1; j < candidate_count; j++)
+        {
+            if(locked[i][j])
+            {
+                
+            }
+        }
+    }
     return;
 }
