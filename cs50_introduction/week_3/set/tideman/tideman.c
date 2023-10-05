@@ -186,6 +186,8 @@ void lock_pairs(void)
     {
         // for every pair lock candidates
         locked[pairs[i].winner][pairs[i].loser] = true;
+
+        if (locked[][])
     }
     return;
 }
