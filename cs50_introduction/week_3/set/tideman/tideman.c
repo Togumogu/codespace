@@ -240,7 +240,7 @@ void print_winner(void)
         {
             if(locked[i][j])
             {
-                votes[i]++
+                votes[i]++;
             }
         }
     }
@@ -255,6 +255,6 @@ void print_winner(void)
             highest_votes_pos = i;
         }
     }
-    printf()
+    printf("%s\n", candidates[highest_votes_pos]);
     return;
 }
