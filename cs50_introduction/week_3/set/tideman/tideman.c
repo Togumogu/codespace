@@ -118,22 +118,13 @@ void record_preferences(int ranks[])
 {
     // TODO
     // iterate through every rank
-    int prefer = 0;
     for (int i = 0; i < candidate_count; i++)
     {
         // iterate through every candidate below the rank
-        for (int j = 0; j < candidate_count; j++)
-        {
-            preferences[ranks[i]][j + 1]++;
-        }
-    }
-
-    for (int i = 0; i < candidate_count; i++)
-    {
-
         for (int j = i + 1; j < candidate_count; j++)
         {
-            preferences[i][j] =
+            // update preferences, ranks[i] is the cand voted for and j is every other candidate below
+            preferences[ranks[i]][ranks[j]]++;
         }
     }
     return;
