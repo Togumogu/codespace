@@ -122,7 +122,7 @@ void record_preferences(int ranks[])
     for (int i = 0; i < candidate_count - 1; i++)
     {
         // iterate through every candidate below the rank
-        for (int j = i + 1; j < candidate_count; j++)
+        for (int j = i + 1; j < candidate_count -1 -i; j++)
         {
             // update preferences, ranks[i] is the cand voted for and j is every other candidate below
             preferences[ranks[i]][ranks[j]]++;
@@ -137,7 +137,7 @@ void add_pairs(void)
     // TODO
     for (int i = 0; i < candidate_count - 1; i++)
     {
-        for (int j = i + 1; j < candidate_count; j++)
+        for (int j = i + 1; j < candidate_count -1 -i; j++)
         {
             if (preferences[i][j] > preferences[j][i])
             {
@@ -164,7 +164,7 @@ void sort_pairs(void)
     // iterate through pairs
     for (int i = 0; i < pair_count - 1; i++)
     {
-        for (int j = i + 1; j < pair_count; j++)
+        for (int j = i + 1; j < pair_count -1 -i; j++)
         {
             // basically if the difference between the first pairs strength is smaller than the next pairs' swap, pairs[].winner is the location of the winner candidate
             int vote_1 = preferences[pairs[i].winner][pairs[i].loser] - preferences[pairs[i].loser][pairs[i].winner];
