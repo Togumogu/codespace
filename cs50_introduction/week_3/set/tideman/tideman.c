@@ -200,13 +200,20 @@ void lock_pairs(void)
 // Check if cycle
 bool is_cycle(int winner, int loser)
 {
+    // first check is the easiest if a reverse locked exists if definetely creates a cycle so return true
     if (locked[loser][winner])
     {
         return true;
     }
-    // cycle through candidates
+    // cycle through candidates, we loop to find the elements between the source and the element that would have created a cycle
     for (int i = 0; i < candidate_count; i++)
     {
+        //e.g. imagine there are 3 candidates, A --> B --> C and we receive a pair of C --> A now this would obviously create a cycle
+        //so to check if there is a cycle we go to the source we go back
+        //we know that source would be the loser or in this case A bc our winner is C and loser is A so to create a cycle we must be starting from B
+        // so we check if there is a locked that is taking our loser (A) as the winner argument that goes to any other candidate
+        // so we are checking if A --> B exists or A--> D exists whatever that may be
+        // we recurse and check again remember
         if (locked[loser][i] && is_cycle(winner, i))
         {
             return true;
