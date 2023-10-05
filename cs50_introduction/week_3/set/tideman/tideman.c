@@ -172,7 +172,10 @@ void sort_pairs(void)
 {
     // TODO
     // iterate through pairs
-    for (int i = 0; )
+    for (int i = 0; i < pair_count; i++)
+    {
+        pairs[i].winner //candidate pos in index
+    }
 
     return;
 }
