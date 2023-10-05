@@ -15,8 +15,7 @@ typedef struct
     string name;
     int votes;
     bool eliminated;
-}
-candidate;
+} candidate;
 
 // Array of candidates
 candidate candidates[MAX_CANDIDATES];
@@ -153,8 +152,8 @@ void tabulate(void)
         // iterate every candidate
         for (int j = 0; j < candidate_count; j++)
         {
-            //if 1st ranked candidate is not eliminated, we stored the place of the candidate remember
-            if(!candidates[preferences[i][j]].eliminated)
+            // if 1st ranked candidate is not eliminated, we stored the place of the candidate remember
+            if (!candidates[preferences[i][j]].eliminated)
             {
                 candidates[preferences[i][j]].votes++;
                 break;
@@ -169,11 +168,10 @@ bool print_winner(void)
 {
     // TODO
     // iterate through candidates
-    int votes_needed = voter_count / 2;
     for (int i = 0; i < candidate_count; i++)
     {
         // if one of candidate votes bigger than half of the votes
-        if (candidates[i].votes > votes_needed)
+        if (candidates[i].votes > voter_count / 2)
         {
             printf("%s\n", candidates[i].name);
             return true;
@@ -233,7 +231,7 @@ bool is_tie(int min)
 void eliminate(int min)
 {
     // TODO
-        // iterate through candidates
+    // iterate through candidates
     for (int i = 0; i < candidate_count; i++)
     {
         if (min == candidates[i].votes)
