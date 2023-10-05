@@ -174,9 +174,12 @@ void sort_pairs(void)
     // iterate through pairs
     for (int i = 0; i < pair_count; i++)
     {
-        //pairs[i].winner; //candidate pos in index
-        // iterate through candidates
-        
+        if ((preferences[pairs[i].winner][pairs[i].loser] - preferences[pairs[i].loser][pairs[i].winner]) < (preferences[pairs[i + 1].winner][pairs[i + 1].loser] - preferences[pairs[i + 1].loser][pairs[i + 1].winner]))
+        {
+            pair tmp = pairs[i];
+            pairs[i] = pairs[i + 1];
+            pairs[i + 1] = tmp;
+        }
         // find the most difference between votes
     }
 
