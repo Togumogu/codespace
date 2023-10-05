@@ -174,7 +174,7 @@ void sort_pairs(void)
     // iterate through pairs
     for (int i = 0; i < pair_count; i++)
     {
-        pairs[i].winner //candidate pos in index
+        //pairs[i].winner; //candidate pos in index
         // find the most difference between votes
     }
 
