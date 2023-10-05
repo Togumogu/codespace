@@ -160,10 +160,10 @@ void add_pairs(void)
 void sort_pairs(void)
 {
     // TODO
-    // iterate through pairs
-    for (int i = 0; i < pair_count; i++)
+    // iterate through pairs -1 bc you dont need to sort the last element
+    for (int i = 0; i < pair_count - 1; i++)
     {
-        for (int j = i + 1; j < pair_count; j++)
+        for (int j = i + 1; j < pair_count - 1 - i; j++) //-i again for efficiancy as we sorted them already dont need to go through them
         {
             // basically if the difference between the first pairs strength is smaller than the next pairs' swap, pairs[].winner is the location of the winner candidate
             if ((preferences[pairs[i].winner][pairs[i].loser] - preferences[pairs[i].loser][pairs[i].winner]) < (preferences[pairs[j].winner][pairs[j].loser] - preferences[pairs[j].loser][pairs[j].winner]))
