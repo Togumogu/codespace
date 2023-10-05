@@ -240,9 +240,18 @@ void print_winner(void)
         {
             if(locked[i][j])
             {
-                //votes[i]
+                votes[i]++
             }
         }
     }
+    int highest_votes = 0;
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (highest_votes < votes[i])
+        {
+            highest_votes = votes[i];
+        }
+    }
+    printf
     return;
 }
