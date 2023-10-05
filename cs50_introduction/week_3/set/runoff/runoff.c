@@ -209,16 +209,21 @@ bool is_tie(int min)
     // TODO
     // create int for counter for tie candidates
     int tie_num = 0;
+    int elim_num = 0;
     // iterate through candidates
     for (int i = 0; i < candidate_count; i++)
     {
-        if (min == candidates[i].votes )
+        if (min == candidates[i].votes && !candidates[i].eliminated)
         {
             tie_num++;
         }
+        else if (candidates[i].eliminated)
+        {
+            elim_num++;
+        }
     }
     // if all are tied
-    if (tie_num == candidate_count)
+    if (tie_num + elim_num == candidate_count)
     {
         return true;
     }
