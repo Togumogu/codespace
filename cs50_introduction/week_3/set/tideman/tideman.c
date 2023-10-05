@@ -228,12 +228,15 @@ bool is_cycle(int winner, int loser)
 // Print the winner of the election
 void print_winner(void)
 {
+    // create array for who has the most locks
     int votes[candidate_count];
+    // populate votes[]
     for (int i = 0; i < candidate_count; i++)
     {
         votes[i] = 0;
     }
     // TODO
+    // iterate through candidates and increase votes if locked exists
     for (int i = 0; i < candidate_count; i++)
     {
         for (int j = 0; j < candidate_count; j++)
@@ -244,7 +247,7 @@ void print_winner(void)
             }
         }
     }
-    int highest_votes_pos = 0;
+    // find the highest amount of locked's
     int highest_votes = 0;
     for (int i = 0; i < candidate_count; i++)
     {
@@ -252,9 +255,15 @@ void print_winner(void)
         if (highest_votes < votes[i])
         {
             highest_votes = votes[i];
-            highest_votes_pos = i;
         }
     }
-    printf("%s\n", candidates[highest_votes_pos]);
+    // print the names of max number of locked's
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (votes[i] == highest_votes)
+        {
+            printf("%s\n", candidates[i]);
+        }
+    }
     return;
 }
