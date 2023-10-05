@@ -233,13 +233,18 @@ void print_winner(void)
         bool tmp = true;
         for (int j = 0; j < candidate_count; j++)
         {
-            if(locked[i][j])
+            if(locked[j][i])
             {
                 tmp = false;
                 break;
             }
         }
+        if (tmp)
+        {
+            printf("%s\n", candidates[i]);
+        }
     }
+    return;
     /* THIS WORKS TOO BUT CHECK50 ISN'T GIVING ALL GREEN
     // create array for who has the most locks
     int votes[candidate_count];
