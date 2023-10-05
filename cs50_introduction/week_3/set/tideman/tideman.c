@@ -140,25 +140,25 @@ void add_pairs(void)
         {
             if (i != j)
             {
+                if (preferences[i][j] > preferences[j][i])
+                {
+                    pairs[].winner = i;
+                    pairs[].loser = j;
+                    pair_count++
 
+                }
+                else if (preferences[i][j] < preferences[j][i])
+                {
+                    pairs[].winner = j;
+                    pairs[].loser = i;
+                    pair_count++
+                }
             }
         }
     }
     return;
 
-    if (preferences[i][j] > preferences[j][i])
-    {
-        pairs[].winner = i;
-        pairs[].loser = j;
-        pair_count++
 
-    }
-    else if (preferences[i][j] < preferences[j][i])
-    {
-        pairs[].winner = j;
-        pairs[].loser = i;
-        pair_count++
-    }
 }
 
 // Sort pairs in decreasing order by strength of victory
