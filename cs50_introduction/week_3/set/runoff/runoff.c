@@ -133,7 +133,7 @@ bool vote(int voter, int rank, string name)
     for (int i = 0; i < candidate_count; i++)
     {
         // if name matches
-        if (strcasecmp(name, candidates[i].name == 0))
+        if (strcasecmp(name, candidates[i].name) == 0)
         {
             // update voter preferences
             preferences[voter][i] = rank;
@@ -191,13 +191,13 @@ int find_min(void)
 {
     // TODO
     // assume min_value is the first candidate
-    int lowest_votes = candidates[0].votes
+    int lowest_votes = candidates[0].votes;
     // iterate through candidates except for the first one
     for (int i = 1; i < candidate_count; i++)
     {
         if (lowest_votes > candidates[i].votes)
         {
-            lowest_votes = candidates[i].votes
+            lowest_votes = candidates[i].votes;
         }
     }
     return lowest_votes;
