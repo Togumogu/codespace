@@ -174,10 +174,11 @@ bool print_winner(void)
 {
     // TODO
     // iterate through candidates
+    int votes_needed = voter_count / 2;
     for (int i = 0; i < candidate_count; i++)
     {
         // if one of candidate votes bigger than half of the votes
-        if (candidates[i].votes > voter_count / 2)
+        if (candidates[i].votes > votes_needed)
         {
             printf("Winner: %s!\n", candidates[i].name);
             return true;
