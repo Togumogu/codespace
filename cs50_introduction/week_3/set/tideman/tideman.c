@@ -119,7 +119,7 @@ void record_preferences(int ranks[])
 {
     // TODO
     // iterate through every rank
-    for (int i = 0; i < candidate_count; i++)
+    for (int i = 0; i < candidate_count - 1; i++)
     {
         // iterate through every candidate below the rank
         for (int j = i + 1; j < candidate_count; j++)
@@ -135,7 +135,7 @@ void record_preferences(int ranks[])
 void add_pairs(void)
 {
     // TODO
-    for (int i = 0; i < candidate_count; i++)
+    for (int i = 0; i < candidate_count - 1; i++)
     {
         for (int j = i + 1; j < candidate_count; j++)
         {
@@ -228,14 +228,19 @@ bool is_cycle(int winner, int loser)
 // Print the winner of the election
 void print_winner(void)
 {
-    // TODO
-    for (int i = 0; i < candidate_count - 1; i++)
+    int votes[candidate_count];
+    for (int i = 0; i < candidate_count; i++)
     {
-        for (int j = i + 1; j < candidate_count; j++)
+        votes[i] = 0;
+    }
+    // TODO
+    for (int i = 0; i < candidate_count; i++)
+    {
+        for (int j = 0; j < candidate_count; j++)
         {
             if(locked[i][j])
             {
-                
+                //votes[i]
             }
         }
     }
