@@ -32,6 +32,7 @@ void record_preferences(int ranks[]);
 void add_pairs(void);
 void sort_pairs(void);
 void lock_pairs(void);
+bool is_cycle(int winner, int loser)
 void print_winner(void);
 
 int main(int argc, string argv[])
@@ -166,7 +167,9 @@ void sort_pairs(void)
         for (int j = i + 1; j < pair_count; j++)
         {
             // basically if the difference between the first pairs strength is smaller than the next pairs' swap, pairs[].winner is the location of the winner candidate
-            if ((preferences[pairs[i].winner][pairs[i].loser] - preferences[pairs[i].loser][pairs[i].winner]) < (preferences[pairs[j].winner][pairs[j].loser] - preferences[pairs[j].loser][pairs[j].winner]))
+            int vote_1 = preferences[pairs[i].winner][pairs[i].loser] - preferences[pairs[i].loser][pairs[i].winner];
+            int vote_2 = preferences[pairs[j].winner][pairs[j].loser] - preferences[pairs[j].loser][pairs[j].winner];
+            if (vote_1 < vote_2)
             {
                 pair tmp = pairs[i];
                 pairs[i] = pairs[j];
@@ -184,14 +187,26 @@ void lock_pairs(void)
     // iterate through pairs
     for (int i = 0; i < pair_count; i++)
     {
-        // for every pair lock candidates
-        locked[pairs[i].winner][pairs[i].loser] = true;
-
-        if (locked[][])
+        // need a function that checks for cycles
+        if(!is_cycle(pairs[i].winner, pairs[i].loser))
+        {
+            // for every pair lock candidates
+            locked[pairs[i].winner][pairs[i].loser] = true;
+        }
     }
     return;
 }
 
+// Check if cycle
+bool is_cycle(int winner, int loser)
+{
+    if (winner == loser)
+    {
+        return true;
+    }
+    for ()
+    return false;
+}
 // Print the winner of the election
 void print_winner(void)
 {
