@@ -175,7 +175,7 @@ bool print_winner(void)
         // if one of candidate votes bigger than half of the votes
         if (candidates[i].votes > votes_needed)
         {
-            printf("Winner: %s!\n", candidates[i].name);
+            printf("%s\n", candidates[i].name);
             return true;
         }
     }
