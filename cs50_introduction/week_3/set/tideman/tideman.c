@@ -100,6 +100,14 @@ int main(int argc, string argv[])
 bool vote(int rank, string name, int ranks[])
 {
     // TODO
+    // iterate every candidate to see if name matches
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (strcasecmp(name, candidates[i]) == 0)
+        {
+            
+        }
+    }
     return false;
 }
 
