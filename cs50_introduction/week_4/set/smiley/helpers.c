@@ -7,12 +7,7 @@ void colorize(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            if (image[i][j] == NULL)
-            {
-                image[i][j].rgbtBlue = 170;
-                image[i][j].rgbtGreen = 255;
-                image[i][j].rgbtRed = 0;
-            }
+            printf("%i\n", image[i][j]);
         }
     }
 }
