@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
     // create an array of 44 each element able to store 8 bits or 1 byte so 44 bytes in total - uint8_t stores 8 bits
     uint8_t header[44];
     // read into input
-    fread(, sizeof(header), 1, input)
+    fread(header, sizeof(header), 1, input)
 
 
 
