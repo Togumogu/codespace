@@ -37,8 +37,10 @@ int main(int argc, char *argv[])
     // TODO: Copy header from input file to output file
     // create an array of 44 each element able to store 8 bits or 1 byte so 44 bytes in total - uint8_t stores 8 bits
     uint8_t header[44];
-    // read into input
+    // read into input header
     fread(header, sizeof(header), 1, input)
+    // write into output header
+    fwrite(header, sizeof)
 
 
 
