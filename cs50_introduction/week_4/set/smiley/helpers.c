@@ -7,7 +7,8 @@ void colorize(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            printf("%i\n", image[i][j]);
+            char *address = malloc(sizeof(image + 1));
+            printf("%s\n", address);
         }
     }
 }
