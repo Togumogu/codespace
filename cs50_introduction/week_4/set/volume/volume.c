@@ -38,9 +38,9 @@ int main(int argc, char *argv[])
     // create an array of 44 each element able to store 8 bits or 1 byte so 44 bytes in total - uint8_t stores 8 bits
     uint8_t header[HEADER_SIZE];
     // read into input header
-    fread(header, sizeof(uint8_t), 1, input);
+    fread(header, sizeof(uint8_t), HEADER_SIZE, input);
     // write into output header
-    fwrite(header, sizeof(uint8_t), 1, output);
+    fwrite(header, sizeof(uint8_t), HEADER_SIZE, output);
     // TODO: Read samples from input file and write updated data to output file
     uint16_t sample[sizeof(input - 44)];
     // read into input header
