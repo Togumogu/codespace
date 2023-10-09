@@ -41,10 +41,12 @@ int main(int argc, char *argv[])
     fread(header, sizeof(header), 1, input);
     // write into output header
     fwrite(header, sizeof(header), 1, output);
-
-
-
     // TODO: Read samples from input file and write updated data to output file
+    uint16_t sample[sizeof(input - 44)];
+    // read into input header
+    fread(sample, sizeof(sample), 1, input);
+    // write into output header
+    fwrite(sample, sizeof(sample), 1, output);
     // Close files
     fclose(input);
     fclose(output);
