@@ -44,6 +44,7 @@ int main(int argc, char *argv[])
     // TODO: Read samples from input file and write updated data to output file
     uint16_t sample[sizeof(input - 44)];
     // read into input header
+    while ()
     fread(sample, sizeof(uint16_t), 1, input);
     // write into output header
     for (int i = 0; i <)
