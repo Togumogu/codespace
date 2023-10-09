@@ -46,6 +46,7 @@ int main(int argc, char *argv[])
     // read into input header
     fread(sample, sizeof(uint16_t), 1, input);
     // write into output header
+    for (int i = 0; i <)
     fwrite(sample, sizeof(uint16_t), 1, output);
     // Close files
     fclose(input);
