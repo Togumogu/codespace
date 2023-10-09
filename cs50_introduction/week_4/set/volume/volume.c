@@ -33,7 +33,6 @@ int main(int argc, char *argv[])
 
     float factor = atof(argv[3]);
 
-
     // TODO: Copy header from input file to output file
     // create an array of 44 each element able to store 8 bits or 1 byte so 44 bytes in total - uint8_t stores 8 bits
     uint8_t header[HEADER_SIZE];
@@ -42,16 +41,14 @@ int main(int argc, char *argv[])
     // write into output header
     fwrite(header, sizeof(uint8_t), HEADER_SIZE, output);
     // TODO: Read samples from input file and write updated data to output file
-    uint16_t starting_sample;
-    // read into input header
-    while (fread(, sizeof(uint16_t), 1, input))
+    uint16_t sample;
+    // read into input sample
+    while (fread(&sample, sizeof(uint16_t), 1, input))
     {
-        
+        // write into output sample
+        sample *= factor;
+        fwrite(&sample, sizeof(uint16_t), 1, output);
     }
-    fread(sample, sizeof(uint16_t), 1, input);
-    // write into output header
-    for (int i = 0; i <)
-    fwrite(sample, sizeof(uint16_t), 1, output);
     // Close files
     fclose(input);
     fclose(output);
