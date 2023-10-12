@@ -9,7 +9,7 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
         {
             if (image[i][j] != 0xFFFFFF)
             {
-                image[i][j] = 0x
+                image[i][j] = 0x000000;
             }
         }
     }
