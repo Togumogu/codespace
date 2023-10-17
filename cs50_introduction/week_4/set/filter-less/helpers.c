@@ -3,12 +3,11 @@
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
-    long total;
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
         {
-            total = image[i][j].rgbtBlue;
+            long total = image[i][j].rgbtBlue;
 
         }
     }
