@@ -25,25 +25,28 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
         for (int j = 0; j < width; j++)
         {
             RGBTRIPLE temp;
-            RGBTRIPLE 
+            RGBTRIPLE semp;
             temp.rgbtBlue = image[i][j].rgbtBlue;
             temp.rgbtGreen = image[i][j].rgbtGreen;
             temp.rgbtRed = image[i][j].rgbtRed;
-            if (image[i][j].rgbtRed > 255)
+            semp.rgbtRed = round(.393 * temp.rgbtRed) + round(.769 * temp.rgbtGreen) + round(.189 * temp.rgbtBlue);
+            semp.rgbtGreen = round(.349 * temp.rgbtRed) + round(.686 * temp.rgbtGreen) + round(.168 * temp.rgbtBlue);
+            semp.rgbtBlue = round(.272 * temp.rgbtRed) + round(.534 * temp.rgbtGreen) + round(.131 * temp.rgbtBlue);
+            if (semp.rgbtRed > 255)
             {
-                image[i][j].rgbtRed = 255;
+                semp.rgbtRed = 255;
             }
-            if (image[i][j].rgbtBlue > 255)
+            if (semp.rgbtBlue > 255)
             {
-                image[i][j].rgbtBlue = 255;
+                semp.rgbtBlue = 255;
             }
-            if (image[i][j].rgbtGreen > 255)
+            if (semp.rgbtGreen > 255)
             {
-                image[i][j].rgbtGreen = 255;
+                semp.rgbtGreen = 255;
             }
-            image[i][j].rgbtRed = round(.393 * temp.rgbtRed) + round(.769 * temp.rgbtGreen) + round(.189 * temp.rgbtBlue);
-            image[i][j].rgbtGreen = round(.349 * temp.rgbtRed) + round(.686 * temp.rgbtGreen) + round(.168 * temp.rgbtBlue);
-            image[i][j].rgbtBlue = round(.272 * temp.rgbtRed) + round(.534 * temp.rgbtGreen) + round(.131 * temp.rgbtBlue);
+            image[i][j].rgbtBlue = semp.rgbtBlue;
+            image[i][j].rgbtGreen = semp.rgbtGreen;
+            image[i][j].rgbtRed = semp.rgbtRed;
         }
     }
     return;
