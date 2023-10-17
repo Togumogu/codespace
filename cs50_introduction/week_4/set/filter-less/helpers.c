@@ -31,31 +31,6 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             image[i][j].rgbtRed = fmin(255, round(.393 * red + .769 * green + .189 * blue));
             image[i][j].rgbtGreen = fmin(255, round(.349 * red + .686 * green + .168 * blue));
             image[i][j].rgbtBlue = fmin(255, round(.272 * red + .534 * green + .131 * blue));
-            /*
-            RGBTRIPLE temp;
-            RGBTRIPLE semp;
-            temp.rgbtBlue = image[i][j].rgbtBlue;
-            temp.rgbtGreen = image[i][j].rgbtGreen;
-            temp.rgbtRed = image[i][j].rgbtRed;
-            semp.rgbtRed = round(.393 * temp.rgbtRed + .769 * temp.rgbtGreen + .189 * temp.rgbtBlue);
-            semp.rgbtGreen = round(.349 * temp.rgbtRed + .686 * temp.rgbtGreen + .168 * temp.rgbtBlue);
-            semp.rgbtBlue = round(.272 * temp.rgbtRed + .534 * temp.rgbtGreen + .131 * temp.rgbtBlue);
-            if (semp.rgbtRed > 255)
-            {
-                semp.rgbtRed = 255;
-            }
-            if (semp.rgbtBlue > 255)
-            {
-                semp.rgbtBlue = 255;
-            }
-            if (semp.rgbtGreen > 255)
-            {
-                semp.rgbtGreen = 255;
-            }
-            image[i][j].rgbtBlue = semp.rgbtBlue;
-            image[i][j].rgbtGreen = semp.rgbtGreen;
-            image[i][j].rgbtRed = semp.rgbtRed;
-            */
         }
     }
     return;
