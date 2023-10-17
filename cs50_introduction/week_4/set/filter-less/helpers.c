@@ -28,9 +28,9 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             temp.rgbtBlue = image[i][j].rgbtBlue;
             temp.rgbtGreen = image[i][j].rgbtGreen;
             temp.rgbtRed = image[i][j].rgbtRed;
-            image[i][j].rgbtRed = .393 * temp.rgbtRed + .769 * temp.rgbtGreen + .189 * temp.rgbtBlue;
-            image[i][j].rgbtGreen = .349 * temp.rgbtRed + .686 * temp.rgbtGreen + .168 * temp.rgbtBlue;
-            image[i][j].rgbtBlue = .272 * temp.rgbtRed + .534 * temp.rgbtGreen + .131 * temp.rgbtBlue;
+            image[i][j].rgbtRed = round(.393 * temp.rgbtRed) + round(.769 * temp.rgbtGreen) + round(.189 * temp.rgbtBlue);
+            image[i][j].rgbtGreen = round(.349 * temp.rgbtRed) + round(.686 * temp.rgbtGreen) + round(.168 * temp.rgbtBlue);
+            image[i][j].rgbtBlue = round(.272 * temp.rgbtRed) + round(.534 * temp.rgbtGreen) + round(.131 * temp.rgbtBlue);
         }
     }
     return;
