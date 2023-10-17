@@ -8,8 +8,9 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
         for (int j = 0; j < width; j++)
         {
             BYTE grayscaled = (image[i][j].rgbtBlue + image[i][j].rgbtGreen + image[i][j].rgbtRed) / 3;
-            printf("Long: %f\n", total);
-
+            image[i][j].rgbtBlue = grayscaled;
+            image[i][j].rgbtGreen = grayscaled;
+            image[i][j].rgbtRed = grayscaled;
         }
     }
     return;
