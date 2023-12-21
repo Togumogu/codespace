@@ -14,10 +14,8 @@ int main(void)
     {
         for (int j = 0; j < height - i - 1; j++)
         {
-            printf(" ");
+            printf("#");
         }
-
-        for (int j = 0; )
         printf("\n");
     }
 }
