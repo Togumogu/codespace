@@ -9,4 +9,5 @@ int main(void)
         credit_num = get_long("Credit Card Number: ");
     }
     while (credit)
+    //calculate lenght
 }
