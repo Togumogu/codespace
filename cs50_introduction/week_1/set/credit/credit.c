@@ -8,7 +8,7 @@ int main(void)
     {
         credit_num = get_long("Credit Card Number: ");
     }
-    while (credit_num > 0)
+    while (credit_num > 0);
     //calculate length
     int length;
     for (int i = 0; 0 < credit_num ; i++)
@@ -16,5 +16,8 @@ int main(void)
         credit_num = credit_num / 10;
         length++;
     }
-    if (length )
+    if (length != 15 || length != 16 || length != 13)
+    {
+        printf("INVALID\n");
+    }
 }
