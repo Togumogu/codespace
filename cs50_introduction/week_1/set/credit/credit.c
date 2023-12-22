@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 //
-bool checkSum(long input_number);
+bool checkSum(long input_number, int num_length);
 //
 int main(void)
 {
@@ -23,11 +23,11 @@ int main(void)
     }
     while (count_length > 0);
     // Checksum func
-    checkSum(credit_num, );
+    checkSum(credit_num, num_length);
 }
 //
 // Checksum
-bool checkSum(long input_number)
+bool checkSum(long input_number, int num_length)
 {
     // Part 2 - get remaining digits
     long num1 = input_number;
