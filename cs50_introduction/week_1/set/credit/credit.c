@@ -30,7 +30,7 @@ int main(void)
     {
         if (i % 2 == 1)
         {
-            int tmp;
+            long tmp;
             tmp = calc % 10;
             tmp *= 2;
             for (int j = 0; 0 < tmp; j++)
