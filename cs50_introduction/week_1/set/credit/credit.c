@@ -49,7 +49,8 @@ int main(void)
     if (fin_calc % 10 != 0)
     {
         printf("INVALID\n");
-    } else
+    }
+    else
     {
         long tmp = credit_num;
         for (int i = 0; 100 < tmp; i++)
@@ -57,15 +58,15 @@ int main(void)
             tmp /= 10;
         }
 
-        if (tmp <= 55 && tmp >= 51)
+        if (tmp <= 55 && tmp >= 51 && length == 16)
         {
             printf("MASTERCARD\n");
         }
-        else if (tmp == 34 || tmp == 37)
+        else if ((tmp == 34 || tmp == 37) && length == 15)
         {
             printf("AMEX\n");
         }
-        else if (tmp / 10 == 4)
+        else if (tmp / 10 == 4 && (length == 13 || length == 16))
         (
             printf("VISA\n")
         );
