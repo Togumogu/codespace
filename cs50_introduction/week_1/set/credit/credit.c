@@ -9,8 +9,7 @@ int main(void)
         credit_num = get_long("Credit Card Number: ");
     }
     while (credit_num < 0);
-    int length_calc;
-    length_calc = credit_num;
+    long length_calc = credit_num;
     //calculate length
     int length = 0;
     for (int i = 0; 0 < length_calc; i++)
@@ -26,7 +25,7 @@ int main(void)
     //calculation
     int first_calc = 0;
     int second_calc = 0;
-    int calc = credit_num;
+    long calc = credit_num;
     for (int i = 0; 0 < calc; i++)
     {
         if (i % 2 == 0)
