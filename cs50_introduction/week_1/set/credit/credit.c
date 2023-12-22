@@ -10,13 +10,13 @@ int main(void)
     }
     while (credit_num > 0);
     //calculate length
-    int length;
+    int length = 0;
     for (int i = 0; 0 < credit_num ; i++)
     {
         credit_num = credit_num / 10;
         length++;
     }
-    if (length != 15 || length != 16 || length != 13)
+    if (length != 15 && length != 16 && length != 13)
     {
         printf("INVALID\n");
     }
