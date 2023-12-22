@@ -51,6 +51,22 @@ int main(void)
         printf("INVALID\n");
     } else
     {
-        printf("VALID\n");
+        long tmp = credit_num;
+        for (int i = 0; 100 < tmp; i++)
+        {
+            tmp /= 10;
+        }
+        if (55 >= tmp >= 51)
+        {
+            printf("MASTERCARD\n");
+        }
+        else if (tmp == 34 || tmp == 37)
+        {
+            printf("AMERICAN EXPRESS\n");
+        }
+        else
+        (
+            printf("VISA\n");
+        )
     }
 }
