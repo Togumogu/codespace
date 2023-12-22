@@ -20,7 +20,7 @@ int main(void)
     //if card length not 13, 15 or 16 - quit out
     if (length != 15 && length != 16 && length != 13)
     {
-        printf("INVALID: %i\n", length);
+        printf("INVALID\n");
     }
     //calculation
     int first_calc = 0;
