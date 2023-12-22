@@ -63,11 +63,11 @@ int main(void)
         }
         else if (tmp == 34 || tmp == 37)
         {
-            printf("AMERICAN EXPRESS\n");
+            printf("AMEX\n");
         }
         else if (tmp / 10 == 4)
         (
-            printf("AMERICAN EXPRESS\n")
+            printf("VISA\n")
         );
     }
 }
