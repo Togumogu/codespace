@@ -21,6 +21,7 @@ int main(void)
     if (length != 15 && length != 16 && length != 13)
     {
         printf("INVALID\n");
+        return false;
     }
     //calculation
     int first_calc = 0;
