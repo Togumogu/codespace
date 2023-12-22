@@ -13,7 +13,7 @@ int main(void)
     int length = 0;
     for (int i = 0; 0 < credit_num; i++)
     {
-        credit_num = credit_num / 10;
+        credit_num /= 10;
         length++;
     }
     //if card length not 13, 15 or 16 - quit out
@@ -28,7 +28,14 @@ int main(void)
         for (int i = 0; 0 < credit_num; i++)
         {
             if (i % 2 = 0)
+            {
+                second_calc += (credit_num % 10)
+            }
+            if else (i % 2 = 1)
+            {
+                first_calc += (credit_num % 10)
+            }
+            credit_num /= 10;
         }
-
     }
 }
