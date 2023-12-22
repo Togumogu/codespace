@@ -37,5 +37,7 @@ int main(void)
             }
             credit_num /= 10;
         }
+        first_calc *= 2;
+        
     }
 }
