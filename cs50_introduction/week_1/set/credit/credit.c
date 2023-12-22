@@ -44,6 +44,10 @@ int main(void)
             }
             credit_num /= 10;
         }
-
+        int fin_calc = first_calc + second_calc;
+        if (fin_calc % 10 != 0)
+        {
+            printf("INVALID\n");
+        }
     }
 }
