@@ -28,7 +28,7 @@ int main(void)
     long calc = credit_num;
     for (int i = 0; 0 < calc; i++)
     {
-        if (i % 2 == 0)
+        if (i % 2 == 1)
         {
             int tmp;
             tmp = calc % 10;
@@ -39,7 +39,7 @@ int main(void)
                 tmp /= 10;
             }
         }
-        else if (i % 2 == 1)
+        else if (i % 2 == 0)
         {
             first_calc += (calc % 10);
         }
