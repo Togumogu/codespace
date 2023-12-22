@@ -68,8 +68,8 @@ int main(void)
             printf("AMEX\n");
         }
         else if (tmp / 10 == 4 && (length == 13 || length == 16))
-        (
-            printf("VISA\n")
-        );
+        {
+            printf("VISA\n");
+        }
     }
 }
