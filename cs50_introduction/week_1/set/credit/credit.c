@@ -22,14 +22,8 @@ int main(void)
         num_length++;
     }
     while (count_length > 0);
-    //
-    // Check for length being correct
-    if (num_length != 15 && num_length != 16 && num_length != 13)
-    {
-        printf("INVALID\n");
-    }
     // Checksum func
-    checkSum(credit_num);
+    checkSum(credit_num, );
 }
 //
 // Checksum
@@ -90,17 +84,17 @@ bool checkSum(long input_number)
     while (check_card > 100);
     //
     // Check which card
-    if (check_card == 34 || check_card == 37)
+    if ((check_card == 34 || check_card == 37) && num_length == 15)
     {
         printf("AMEX\n");
         return true;
     }
-    else if (check_card == 51 || check_card == 52 || check_card == 53 || check_card == 54 || check_card == 55)
+    else if ((check_card == 51 || check_card == 52 || check_card == 53 || check_card == 54 || check_card == 55) && num_length == 16)
     {
         printf("MASTERCARD\n");
         return true;
     }
-    else if (check_card / 10 == 4)
+    else if (check_card / 10 == 4 && (num_length == 16 || num_length == 13))
     {
         printf("VISA\n");
         return true;
