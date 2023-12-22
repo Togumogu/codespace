@@ -56,6 +56,7 @@ int main(void)
         {
             tmp /= 10;
         }
+
         if (55 >= tmp >= 51)
         {
             printf("MASTERCARD\n");
@@ -64,9 +65,9 @@ int main(void)
         {
             printf("AMERICAN EXPRESS\n");
         }
-        else
+        else if (tmp / 10 == 4)
         (
-            printf("VISA\n");
-        )
+            printf("AMERICAN EXPRESS\n")
+        );
     }
 }
