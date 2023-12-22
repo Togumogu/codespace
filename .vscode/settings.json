@@ -4,6 +4,7 @@
         "develop"
     ],
     "files.associations": {
-        "string.h": "c"
+        "string.h": "c",
+        "string_view": "c"
     }
 }

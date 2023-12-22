@@ -9,48 +9,49 @@ int main(void)
         credit_num = get_long("Credit Card Number: ");
     }
     while (credit_num < 0);
+    int length_calc = credit_num;
     //calculate length
     int length = 0;
-    for (int i = 0; 0 < credit_num; i++)
+    for (int i = 0; 0 < length_calc; i++)
     {
-        credit_num /= 10;
+        length_calc /= 10;
         length++;
     }
     //if card length not 13, 15 or 16 - quit out
     if (length != 15 && length != 16 && length != 13)
     {
         printf("INVALID\n");
+        return 1;
     }
-    else
+    //calculation
+    int first_calc = 0;
+    int second_calc = 0;
+    int calc = credit_num;
+    for (int i = 0; 0 < calc; i++)
     {
-        int first_calc = 0;
-        int second_calc = 0;
-        for (int i = 0; 0 < credit_num; i++)
+        if (i % 2 == 0)
         {
-            if (i % 2 == 0)
+            int tmp;
+            tmp = calc % 10;
+            tmp *= 2;
+            for (int j = 0; 0 < tmp; j++)
             {
-                int tmp;
-                tmp = credit_num % 10;
-                tmp *= 2;
-                for (int j = 0; 0 < tmp; j++)
-                {
-                    second_calc = tmp % 10;
-                    tmp /= 10;
-                }
+                second_calc = tmp % 10;
+                tmp /= 10;
             }
-            else if (i % 2 == 1)
-            {
-                first_calc += (credit_num % 10);
-            }
-            credit_num /= 10;
         }
-        int fin_calc = first_calc + second_calc;
-        if (fin_calc % 10 != 0)
+        else if (i % 2 == 1)
         {
-            printf("INVALID\n");
-        } else
-        {
-            printf("VALID\n");
+            first_calc += (calc % 10);
         }
+        calc /= 10;
+    }
+    int fin_calc = first_calc + second_calc;
+    if (fin_calc % 10 != 0)
+    {
+        printf("INVALID\n");
+    } else
+    {
+        printf("VALID\n");
     }
 }
