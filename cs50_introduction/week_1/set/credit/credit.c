@@ -27,7 +27,7 @@ int main(void)
         int second_calc = 0;
         for (int i = 0; 0 < credit_num; i++)
         {
-            if (i % 2 = 0)
+            if (i % 2 == 0)
             {
                 int tmp;
                 tmp = credit_num % 10;
@@ -38,9 +38,9 @@ int main(void)
                     tmp /= 10;
                 }
             }
-            if else (i % 2 = 1)
+            else if (i % 2 == 1)
             {
-                first_calc += (credit_num % 10)
+                first_calc += (credit_num % 10);
             }
             credit_num /= 10;
         }
@@ -48,6 +48,9 @@ int main(void)
         if (fin_calc % 10 != 0)
         {
             printf("INVALID\n");
+        } else
+        {
+            printf("VALID\n");
         }
     }
 }
