@@ -35,7 +35,7 @@ int main(void)
             tmp *= 2;
             for (int j = 0; 0 < tmp; j++)
             {
-                second_calc = tmp % 10;
+                second_calc += tmp % 10;
                 tmp /= 10;
             }
         }
