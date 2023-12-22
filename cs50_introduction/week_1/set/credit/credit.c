@@ -29,7 +29,8 @@ int main(void)
         {
             if (i % 2 = 0)
             {
-                second_calc += (credit_num % 10)
+                int tmp;
+                tmp = credit_num % 10
             }
             if else (i % 2 = 1)
             {
@@ -38,6 +39,6 @@ int main(void)
             credit_num /= 10;
         }
         first_calc *= 2;
-        
+
     }
 }
