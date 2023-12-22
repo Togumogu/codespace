@@ -57,7 +57,7 @@ int main(void)
             tmp /= 10;
         }
 
-        if (55 >= tmp >= 51)
+        if (tmp <= 55 && tmp >= 51)
         {
             printf("MASTERCARD\n");
         }
